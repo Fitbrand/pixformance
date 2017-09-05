@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  #Vars
+\*------------------------------------*/
+
+:root {
+  /*
+ * Fonts
+ */
+
+  --font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto,
+    noto, "segoe ui", arial, sans-serif;
+  --font-family-heading: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu,
+    roboto, noto, "segoe ui", arial, sans-serif;
+  --font-family-serif: initial;
+
+  --site-width: 80em;
+
+  /*
+  * Colors
+  */
+
+  --gray: #404040;
+  --gray-light: #f7f7f7;
+  --purple: #362e66;
+  --red: #f54851;
+  --yellow: #f5c723;
+  --white: #fff;
+  --gray-medium: #7e88a7;
+
+
+  /*
+  * Breakpoints
+  */
+
+  @custom-media --breakpoint-large (min-width: 102em);
+}
