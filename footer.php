@@ -10,25 +10,36 @@
  */
 
 ?>
+	</div>
+	<?php get_template_part('template-parts/contact-cta');?>
+	<footer id="colophon" class="p4-t">
+		<div class="layout f7">
+			<div class="grid-sixes m6-b">
+				<div>
+					<h5 class="bold ttu"><?php bloginfo( 'name' ); ?></h5>
+					<p>
+						Principal Office<br> Hauptstr. 19-20<br> D- Dallgow-Döberitz
+					</p>
+				</div>
+				<div>
+					<p>
+						Development Office <br> Helmholtzstraße 2-9 <br> GSG Hof/Aufgang H <br> D-10587 Berlin
+					</p>
+				</div>
+				<div>
+					<p>
+						<strong>T</strong>+49 (0)30 39 80 56 10 <br>
+						<strong>F</strong>+49 (0)30 39 80 56 129 <br>
+						<strong>M</strong>contact@pixformance.com
+					</p>
+				</div>
+			</div>
+			<p class="m1-b">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> - <?php esc_html_e( 'all rights reserved', '_pixformance' ); ?></p>
+		</div>
+	</footer>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_pixformance' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', '_pixformance' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', '_pixformance' ), '_pixformance', '<a href="https://automattic.com/">Automattic</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+	<?php get_template_part('template-parts/footer-cta');?>
+</div>
 <?php wp_footer(); ?>
-
 </body>
 </html>

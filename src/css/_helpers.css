@@ -29,6 +29,14 @@
   font-size: 0.875rem;
 }
 
+.f6 {
+  font-size: 0.875rem;
+}
+
+.f7 {
+  font-size: 0.750rem;
+}
+
 /*
  * Line height
  */
@@ -103,6 +111,10 @@
   background-color: var(--gray-medium);
 }
 
+.bg-gray-light {
+  background-color: var(--gray-light);
+}
+
 .bg-red {
   background-color: var(--red);
 }
@@ -128,12 +140,28 @@
 
 
 
+ /* level 3 */
+
+.p3-t {
+  padding-top: 3rem;
+}
+
  /* level 4 */
 
-
+.p4-t {
+  padding-top: 4rem;
+}
 
  /* level 6 */
 
+.p6-t {
+  padding-top: 6rem;
+}
+
+.p6-tb {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
 
 
 /*
@@ -168,7 +196,9 @@
 
 /* level 6 */
 
-
+.m6-b {
+  margin-bottom: 6rem;
+}
 
 /* level 6 */
 
@@ -201,6 +231,11 @@
 .grid-halves {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.grid-sixes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 3rem;
 }
 
@@ -226,6 +261,10 @@
 
  }
 
+ .w-half {
+   max-width: calc(var(--site-width) / 2)
+ }
+
 
 /*
  * Hover effects
@@ -241,3 +280,21 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+ /*
+ * Font styles
+ */
+
+ .bold {
+   font-weight: 600;
+ }
+ 
+
+/*
+ * Background styles
+ */
+
+ .filled {
+   background-size: cover;
+   background-repeat: no-repeat;
+ }

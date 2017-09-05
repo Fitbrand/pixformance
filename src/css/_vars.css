@@ -13,17 +13,20 @@
     roboto, noto, "segoe ui", arial, sans-serif;
   --font-family-serif: initial;
 
-  --site-width: 80em;
+  --site-width: 80rem;
 
   /*
   * Colors
   */
 
-  --gray: #404040;
-  --gray-light: #f7f7f7;
-  --purple: #362e66;
+  --black: #000;
+  --gray: #666666;
+  --gray-light: #f6f9fc;
+  --purple: #493b94;
+  --green: #86c9bc;
   --red: #f54851;
   --yellow: #f5c723;
+  --yellow-light: #fdfeec;
   --white: #fff;
   --gray-medium: #7e88a7;
 

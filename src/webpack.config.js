@@ -49,7 +49,7 @@ module.exports = {
       // ./public directory is being served
       host: "localhost",
       port: 3000,
-      files: ['../dist/main.css', '../dist/app.bundle.js', '../*.php', '../template-parts/*.php', '../inc/*.php'],
+      files: ['../dist/main.css', '../dist/app.bundle.js', '../*.php', '../template-parts/*.php', '../page-templates/*.php', '../inc/*.php'],
       proxy: 'http://www.pixformance.dev/',
       notify: false
     })

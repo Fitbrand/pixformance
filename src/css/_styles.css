@@ -7,6 +7,10 @@
  * Main layout
  */
 
+.wrapper {
+  position: relative;
+}
+
 .layout {
   max-width: var(--site-width);
   margin-left: auto;
@@ -72,3 +76,31 @@
   grid-template-columns: .45fr 1fr;
   grid-gap: 3rem;
 }
+
+
+/*
+ * Strokes
+ */
+
+ .stroke {
+   position: absolute;
+   z-index: -5;
+   height: 50px;
+   border-radius: 90px;
+   mix-blend-mode: hard-light;
+   transform: rotate(15deg);
+   width: 0;
+   max-width: 400px;
+ }
+
+ .stroke.active {
+   z-index: 5;
+ }
+
+  .pos-top {
+    top: 10rem;
+  }
+
+  .pos-right {
+    right: 10rem;
+  }
