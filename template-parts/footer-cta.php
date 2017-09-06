@@ -10,8 +10,8 @@
         <div class="filled" style="background-image: url('<?php echo $image; ?>')">
           &nbsp;
         </div>
-        <div class="bg-purple p6-tb white">
-          <a href="<?php echo $link; ?>" class="f3 white no-underline"><?php echo $content; ?></a>
+        <div class="bg-purple p9-t white p1-lr text-center">
+          <a href="<?php echo $link; ?>" class="m7-b inline-block f2 white no-underline w-small l-large italic"><?php echo $content; ?></a>
         </div>
       </div>
     </div>

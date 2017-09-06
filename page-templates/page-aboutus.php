@@ -11,17 +11,21 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="wrapper bg-yellow-light ">
+	<div class="h-full layout v-center p3-lr text-center">
+		<div class="w-half-extra center">
+			<h1 class="f-2 m3-b"><?php the_field('about_header');?></h1>
+		</div>
+	</div>
+</div>
 
-			<?php
-			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content', 'page' );
-			endwhile; // End of the loop.
-			?>
+<?php get_template_part( 'template-parts/content-image-right' ); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+<?php get_template_part( 'template-parts/about-valerie' ); ?>
+
+
+
+
 
 <?php
 get_sidebar();

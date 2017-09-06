@@ -11,12 +11,14 @@
 
 ?>
 	</div>
+	<?php get_template_part( 'template-parts/recent-customers' ); ?>
+	<?php get_template_part( 'template-parts/story-download' ); ?>
 	<?php get_template_part('template-parts/contact-cta');?>
-	<footer id="colophon" class="p4-t">
-		<div class="layout f7">
+	<footer id="colophon" class="p6-t">
+		<div class="layout f7 p3-lr">
+		<h5 class="bold ttu"><?php bloginfo( 'name' ); ?></h5>
 			<div class="grid-sixes m6-b">
 				<div>
-					<h5 class="bold ttu"><?php bloginfo( 'name' ); ?></h5>
 					<p>
 						Principal Office<br> Hauptstr. 19-20<br> D- Dallgow-Döberitz
 					</p>
@@ -28,13 +30,13 @@
 				</div>
 				<div>
 					<p>
-						<strong>T</strong>+49 (0)30 39 80 56 10 <br>
-						<strong>F</strong>+49 (0)30 39 80 56 129 <br>
-						<strong>M</strong>contact@pixformance.com
+						<strong class="label-spacer">T</strong>+49 (0)30 39 80 56 10 <br>
+						<strong class="label-spacer">F</strong>+49 (0)30 39 80 56 129 <br>
+						<strong class="label-spacer">M</strong>contact@pixformance.com
 					</p>
 				</div>
 			</div>
-			<p class="m1-b">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> - <?php esc_html_e( 'all rights reserved', '_pixformance' ); ?></p>
+			<p class="m2-b">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> - <?php esc_html_e( 'all rights reserved', '_pixformance' ); ?></p>
 		</div>
 	</footer>
 

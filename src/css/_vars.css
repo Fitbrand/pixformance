@@ -7,13 +7,13 @@
  * Fonts
  */
 
-  --font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto,
+  --font-family: 'Fakt Pro Bln', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto,
     noto, "segoe ui", arial, sans-serif;
-  --font-family-heading: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu,
+  --font-family-heading: 'Fakt Pro Bln', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu,
     roboto, noto, "segoe ui", arial, sans-serif;
   --font-family-serif: initial;
 
-  --site-width: 80rem;
+  --site-width: 86rem;
 
   /*
   * Colors
@@ -28,12 +28,15 @@
   --yellow: #f5c723;
   --yellow-light: #fdfeec;
   --white: #fff;
-  --gray-medium: #7e88a7;
+  --gray-medium: #ebf2f1;
 
+
+  --f4: 1.25rem;
 
   /*
   * Breakpoints
   */
 
-  @custom-media --breakpoint-large (min-width: 102em);
+  @custom-media --breakpoint-large (min-width: 102rem);
+  @custom-media --breakpoint-mobile-only (max-width: 20rem);
 }

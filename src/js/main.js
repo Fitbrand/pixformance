@@ -41,9 +41,24 @@ $(document).ready(function() {
       elem.addClass("active").animate({ width: "30%" }, 700, "linear");
     }
   }
+  
+  function checkNavigationAnimation() {
+    var elem = $("#masthead");
+    
+    var scroll = $(window).scrollTop();
+
+    if(scroll > 100) {
+      elem.addClass("active");
+      elem.removeClass("p1-tb");
+    }else  {
+      elem.removeClass('active')
+      elem.addClass("p1-tb");
+    }
+
+  }
 
   // Capture scroll events
   jQuery(window).scroll(function() {
-    checkAnimation();
+    checkNavigationAnimation();
   });
 });

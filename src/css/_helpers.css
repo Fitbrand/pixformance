@@ -7,14 +7,14 @@
  */
 
  .f-headline {
-   font-size: 5rem;
+   font-size: 3rem;
  }
 
 .f1 {
   font-size: 3rem;
 }
 .f2 {
-  font-size: 2.25rem;
+  font-size: 1.8rem;
 }
 .f3 {
   font-size: 1.6rem;
@@ -51,7 +51,7 @@
 }
 
 .l-large {
-  line-height: 2em;
+  line-height: 1.65em;
 }
 
 .l-xlarge {
@@ -89,9 +89,21 @@
   text-decoration: none;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 /*
  * Colors
  */
+
+.black {
+  color: var(--black)
+}
 
 .gray {
   color: var(--gray);
@@ -107,6 +119,11 @@
 
 /* background colors */
 
+
+.bg-white {
+  background-color: var(--white);
+}
+
 .bg-gray-medium {
   background-color: var(--gray-medium);
 }
@@ -121,8 +138,21 @@
 .bg-yellow {
   background-color: var(--yellow);
 }
+
+.bg-yellow-light {
+  background-color: var(--yellow-light)
+}
+
 .bg-purple {
   background-color: var(--purple);
+}
+
+.bg-green {
+  background-color: var(--green)
+}
+
+.bg-gray {
+  background-color: var(--gray);
 }
 
 /* hover colors */
@@ -136,14 +166,39 @@
  * Padding
  */
 
+
+
+.p1-tb {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
  /* level 1 */
 
+.p1-lr {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.p1-tb {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.p1 {
+  padding: 1rem;
+}
 
 
  /* level 3 */
 
 .p3-t {
-  padding-top: 3rem;
+  padding-top: 3rem !important;
+}
+
+.p3-lr {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
  /* level 4 */
@@ -158,9 +213,30 @@
   padding-top: 6rem;
 }
 
+.p6-b {
+  padding-bottom: 6rem;
+}
+
 .p6-tb {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.p6 {
+  padding: 6rem;
+}
+
+
+
+
+
+ /* level 9 */
+
+.p9-t {
+  padding-top: 9rem;
+}
+.p9-t {
+  padding-top: 9rem;
 }
 
 
@@ -170,6 +246,10 @@
 
 
  /* level 0 */
+
+.m0-last:last-of-type {
+  margin: 0;
+}
 
 .m0 {
   margin: 0;
@@ -184,14 +264,22 @@
 
  /* level 2 */
 
-
+.m2-b {
+  margin-bottom: 2rem;
+}
 
 
 /* level 3 */
 
+.m3-b {
+  margin-bottom: 3rem;
+}
 
 /* level 4 */
 
+.m4-b {
+  margin-bottom: 4rem;
+}
 
 
 /* level 6 */
@@ -200,13 +288,18 @@
   margin-bottom: 6rem;
 }
 
-/* level 6 */
+/* level 7 */
+
+.m7-b {
+  margin-bottom: 7rem;
+}
 
 
+/* level 9 */
 
-/* level 10 */
-
-
+.m9-b {
+  margin-bottom: 9rem;
+}
 
 /*
  * Lists
@@ -233,24 +326,36 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.grid-thirds {
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .grid-sixes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 3rem;
 }
 
+.grid-space {
+  grid-column-gap: 2rem;
+}
 
 .block {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 
 /*
- * Width
+ * Widths
  */
 
  .w-small {
-
+   max-width: 300px;
  }
 
  .w-medium {
@@ -261,8 +366,34 @@
 
  }
 
+ .w-full {
+   width: 100%;
+ }
+
  .w-half {
    max-width: calc(var(--site-width) / 2)
+ }
+ 
+ .w-half-extra {
+   max-width: calc(var(--site-width) / 2 + 6)
+ }
+ 
+ .w-third {
+   max-width: calc(var(--site-width) * .33)
+ }
+ 
+ .w-third-extra {
+   max-width: calc(var(--site-width) * .33 + 5)
+ }
+
+
+
+ /*
+ * Heights
+ */
+
+ .h-full {
+   height: 100vh;
  }
 
 
@@ -281,6 +412,10 @@
   margin-right: auto;
 }
 
+.push-right {
+  margin-left: auto;
+}
+
  /*
  * Font styles
  */
@@ -288,6 +423,11 @@
  .bold {
    font-weight: 600;
  }
+
+ .italic {
+   font-style: italic;
+ }
+ 
  
 
 /*
@@ -295,6 +435,65 @@
  */
 
  .filled {
-   background-size: cover;
    background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
  }
+
+
+/*
+ * Background styles
+ */
+
+ .fixed {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 10;
+ }
+
+ .flex-spaced {
+   display: flex;
+   justify-content: space-between;
+ }
+
+.v-center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.v-align-center {
+  align-items: center;
+}
+
+.v-center-spaced {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-grid {
+  display: flex; 
+}
+
+.label-spacer {
+  min-width: 20px;
+  display: inline-block;
+}
+
+
+.hover-effect {
+  transition: all .2s ease-in;
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  }  
+}
+
+
+.filter-white {
+  filter: brightness(0) invert(1);
+}

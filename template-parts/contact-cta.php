@@ -5,10 +5,10 @@
   $title = $cta['title']; 
   $form = $cta['form'];
 ?>
-<div class="wrapper bg-gray-light">
-  <div class="layout p6-tb">
+<div class="wrapper bg-gray-light clearfix">
+  <div class="layout p9-t m9-b">
     <div class="w-half">
-      <h4 class="f3"><?php echo $title; ?></h4>
+      <h4 class="f3 m6-b"><?php echo $title; ?></h4>
       <?php echo do_shortcode($form); ?>
     </div>
   </div>

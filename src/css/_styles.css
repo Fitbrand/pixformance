@@ -27,13 +27,38 @@
  */
 
 .logo {
-  height: 64px;
-  width: 64px;
+  width: 200px;
+  height: 46px;
+}
+
+#masthead {
+    z-index: 15;
+  transition: background .5s  ease-in-out, padding .7s  ease-in-out;
+  background: color(var(--white) alpha(0%));
+}
+
+#masthead.active {
+  background: color(var(--white) alpha(100%));
+  transition: background .5s  ease-in-out, padding .7s  ease-in-out;
 }
 
 .main-navigation {
-  display: flex;
-  justify-content: space-between;
+  & ul {
+    list-style: none;
+    display: flex;
+  }
+  & a {
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  & li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 
@@ -58,24 +83,41 @@
   grid-template-rows: 6em 1fr 6em;
 }
 
-.intro-left {
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
-  z-index: 2;
-  position: relative;
-}
-
-.intro-right {
-  grid-column: 3 / 6;
-  grid-row: 1 / 4;
-  background-size: cover;
-}
-
-.client-grid {
+.usps {
   display: grid;
-  grid-template-columns: .45fr 1fr;
-  grid-gap: 3rem;
+  grid-template-columns: 1fr 2fr 1fr;
 }
+
+.stories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3rem;
+}
+
+.where-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 6rem;
+}
+
+.workout-mockup {
+  max-width: 460px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+
+
+/*
+ * About
+ */
+
+
+.grid-image-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
 
 
 /*
@@ -104,3 +146,69 @@
   .pos-right {
     right: 10rem;
   }
+
+/*
+ * Forms
+ */
+
+ input[type="submit"] {
+   box-shadow: none;
+   border: 0;
+   cursor: pointer;
+ }
+
+ .wpcf7 {
+   width: 100%;
+ }
+
+.form-field-naked {
+  width: 100%;
+  & input {
+    border: 0;
+    background: 0;
+    border-bottom: 2px solid var(--black);
+    width: 100%;
+    transition: all .2s ease-in-out;
+    outline: none;
+    padding: .5rem 0;
+  }
+
+  & input::placeholder {
+    font-size: .75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  & input:focus {
+    //margin-top: 1rem;
+  }
+
+  & label {
+    width: 100%;
+    display: block;
+  }
+
+}
+
+
+.story-featured-image {
+  max-width: 120px;
+  height: auto;
+  align-self: center;
+}
+
+.story-featured-image-wrapper {
+  height: 140px;
+  display: flex;
+  justify-content: center;
+}
+
+.recent-client-image-wrapper {
+    height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.story-featured {
+
+}

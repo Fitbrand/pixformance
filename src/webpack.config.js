@@ -25,6 +25,11 @@ module.exports = {
           fallback: "style-loader",
           use: "css-loader?importLoaders=1!postcss-loader"
         })
+      }, {
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: {
+          loader: 'file-loader?name=fonts/[name].[ext]'
+        }
       }
     ]
   },
