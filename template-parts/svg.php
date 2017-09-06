@@ -6,3 +6,21 @@
  </g>
  </symbol>
 </svg>
+
+
+<!-- Embeded svg sprite reference -->
+<svg display="none" xmlns="http://www.w3.org/2000/svg">
+ <symbol id="icon-play" viewBox="0 0 92.5 92.5" >
+ <defs>
+ <style>.acls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2.5px}</style>
+ </defs>
+ <g id="aLayer_2" data-name="Layer 2">
+ <g id="aLayer_1-2" data-name="Layer 1">
+ <path class="acls-1" d="M63.67 46.25L38.99 70.93M38.99 21.57L57.7 40.28"/>
+ <circle class="acls-1" cx="46.25" cy="46.25" r="45"/>
+ </g>
+ </g>
+ </symbol>
+</svg>
+
+<!-- Later in the code, use it... -->

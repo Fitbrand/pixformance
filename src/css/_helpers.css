@@ -117,6 +117,10 @@
   color: var(--red);
 }
 
+.blue {
+  color: var(--blue)
+}
+
 /* background colors */
 
 
@@ -339,6 +343,17 @@
 
 .grid-space {
   grid-column-gap: 2rem;
+}
+
+.grid-image-left {
+  & div:nth-child(1) {
+    order: 2;
+  }
+}
+.grid-image-right {
+  & div:nth-child(1) {
+    order: 1;
+  }
 }
 
 .block {

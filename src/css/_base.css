@@ -127,3 +127,59 @@ img {
   display: table;
   clear: both;
 }
+
+
+.youtube {
+	background-color: #000;
+	margin-bottom: 30px;
+	position: relative;
+	padding-top: 56.25%;
+	overflow: hidden;
+	cursor: pointer;
+}
+.youtube img {
+	width: 100%;
+	top: -16.82%;
+	left: 0;
+	opacity: 0.7;
+}
+.youtube .play-button {
+  z-index: 15;
+}
+.youtube .play-button:before {
+
+}
+
+.icon-play {
+  width: 90px;
+  height: 90px;
+  transition: all .2s ease-in;
+  text-transform: uppercase;
+ &:hover {
+
+    transform: translateY(-5px);
+  }
+
+}
+
+.youtube img,
+.youtube .play-button {
+	cursor: pointer;
+}
+.youtube img,
+.youtube iframe,
+.youtube .play-button,
+.youtube .play-button:before {
+	position: absolute;
+}
+.youtube .play-button,
+.youtube .play-button:before {
+	top: 50%;
+	left: 50%;
+}
+.youtube iframe {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}

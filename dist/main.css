@@ -273,6 +273,67 @@ img {
   clear: both;
 }
 
+.youtube {
+	background-color: #000;
+	margin-bottom: 30px;
+	position: relative;
+	padding-top: 56.25%;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.youtube img {
+	width: 100%;
+	top: -16.82%;
+	left: 0;
+	opacity: 0.7;
+}
+
+.youtube .play-button {
+  z-index: 15;
+}
+
+.youtube .play-button:before {
+
+}
+
+.icon-play {
+  width: 90px;
+  height: 90px;
+  transition: all .2s ease-in;
+  text-transform: uppercase
+
+}
+
+.icon-play:hover {
+	transform: translateY(-5px);
+}
+
+.youtube img,
+.youtube .play-button {
+	cursor: pointer;
+}
+
+.youtube img,
+.youtube iframe,
+.youtube .play-button,
+.youtube .play-button:before {
+	position: absolute;
+}
+
+.youtube .play-button,
+.youtube .play-button:before {
+	top: 50%;
+	left: 50%;
+}
+
+.youtube iframe {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
 /*------------------------------------*\
   #Helpers
 \*------------------------------------*/
@@ -397,6 +458,10 @@ img {
 
 .red {
   color: #f54851;
+}
+
+.blue {
+  color: #2274B5
 }
 
 /* background colors */
@@ -607,6 +672,20 @@ img {
 
 .grid-space {
   grid-column-gap: 2rem;
+}
+
+.grid-image-left {
+}
+
+.grid-image-left div:nth-child(1) {
+	order: 2;
+}
+
+.grid-image-right {
+}
+
+.grid-image-right div:nth-child(1) {
+	order: 1;
 }
 
 .block {
@@ -956,10 +1035,41 @@ input[type="submit"] {
 
 .recent-client-image-wrapper {
     height: 70px;
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .story-featured {
 
+}
+
+.video-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+    height: 100vh;
+  width: 100%;
+  opacity: 1;
+  transition: .2s opacity ease-in-out, .4s z-index ease-in-out;
+  z-index: 5;
+}
+
+.video-content-wrapper.hide {
+  opacity: 0;
+  z-index: -5;
+}
+
+.video-content {
+   height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+    align-items: center;
+}
+
+.grid-icon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 6rem;
 }

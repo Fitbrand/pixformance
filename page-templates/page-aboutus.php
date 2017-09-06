@@ -19,7 +19,7 @@ get_header(); ?>
 	</div>
 </div>
 
-<?php get_template_part( 'template-parts/content-image-right' ); ?>
+<?php get_template_part( 'template-parts/content-block-general' ); ?>
 
 <?php get_template_part( 'template-parts/about-valerie' ); ?>
 
