@@ -29,7 +29,11 @@
 .logo {
   width: 200px;
   height: 46px;
+  transition: top .5s ease-in-out;
+  position: relative;
+  top: 2px;
 }
+
 
 #masthead {
     z-index: 15;
@@ -53,12 +57,71 @@
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.85rem;
+    padding: 0rem;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   & li {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  & .sub-menu {
+    position: absolute;
+    z-index: 10;
+    background: var(--white);
+    padding: .5rem 0 0 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 200ms var(--bezier-a), transform 200ms var(--bezier-a);
+    pointer-events: none;
+    top: 100%;
+    width: 180px;
+    left: calc(50% - 90px);
+   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    display: block;
+
+    & a {
+      padding: .5rem 0;
+      display: block;
+    }
+
+    & li {
+      display: block;
+    }
+
+    & :after {
+      content: " ";
+      position: absolute;
+      top: -0.35rem;
+      left: calc(50% - 0.4rem);
+      border-top: 0;
+      border-left: 0.4rem solid transparent;
+      border-right: 0.4rem solid transparent;
+      border-bottom: 0.4rem solid var(--white);
+    }
+  }
+
+
+  & .menu-item-has-children {
+    position: relative;
+
+    &:hover {
+      & .sub-menu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+      }
+    }
+
+  }
+
 }
 
 
@@ -107,15 +170,15 @@
 
 
 /*
- * About
+ * 404
  */
 
-
-.grid-image-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.icon-404 {
+  width: 580px;
+  height: 318px;
+  position: relative;
+  left: -40px;
 }
-
 
 
 
@@ -242,4 +305,50 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 6rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  //grid-auto-rows: minmax(max-content, 40vmax);
+
+}
+
+.blog-grid-item {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: block;
+
+  &:nth-of-type(1) {
+   grid-column-end: span 2;
+  }
+  
+  &:nth-of-type(4) {
+    grid-column-end: span 2;
+  }
+  
+  &:nth-of-type(5) {
+    grid-column-end: span 2;
+  }
+  
+  &:nth-of-type(8) {
+    grid-column-end: span 2;
+  }
+
+}
+
+.blog-grid-label {
+}
+
+.cover {
+  object-fit: cover;
+  height: 590px;
+}
+
+.label-on-top {
+  position: absolute;
+  top: 45%;
+  margin-left: 3rem;
 }

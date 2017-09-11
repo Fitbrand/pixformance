@@ -50,7 +50,7 @@ p {
  */
 
 a {
-  color: var(--red);
+  color: var(--black);
 
 
   &:hover {
@@ -94,6 +94,10 @@ img {
 .button-secondary {
   background-color: var(--white);
   color: var(--black)
+}
+
+.button + .button {
+  margin-left: 1rem;
 }
 
 .screen-reader-text {
@@ -182,4 +186,13 @@ img {
 	width: 100%;
 	top: 0;
 	left: 0;
+}
+
+
+.list{
+  margin: 0 0 0 1rem;
+  padding: 0;
+ & li {
+   margin-bottom: 1rem;
+ }
 }

@@ -15,6 +15,8 @@
 
   --site-width: 86rem;
 
+    --bezier-a: cubic-bezier(0.075, 0.82, 0.165, 1);
+
   /*
   * Colors
   */
@@ -25,7 +27,7 @@
   --purple: #493b94;
   --green: #86c9bc;
   --red: #f54851;
-  --yellow: #f5c723;
+  --yellow: #ECF244;
   --yellow-light: #fdfeec;
   --white: #fff;
   --gray-medium: #ebf2f1;

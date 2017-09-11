@@ -25,7 +25,11 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_pixformance' ); ?></a>
 
-	<header id="masthead" class="fixed flex-spaced p3-lr p1-tb">
+	<?php if(is_page_template('page-templates/page-imprint.php') || is_404()) : ?>
+		<header id="masthead" class="fixed flex-spaced p3-lr active no-scroll">
+	<?php else : ?>
+		<header id="masthead" class="fixed flex-spaced p3-lr p1-tb">
+	<?php endif; ?>
 		<div class="site-branding">
 			<a class="block" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<svg class="logo">

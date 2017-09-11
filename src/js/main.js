@@ -44,6 +44,10 @@ $(document).ready(function() {
   
   function checkNavigationAnimation() {
     var elem = $("#masthead");
+
+    if($("#masthead").hasClass("no-scroll")) {
+      
+    } else {
     
     var scroll = $(window).scrollTop();
 
@@ -54,6 +58,7 @@ $(document).ready(function() {
       elem.removeClass('active')
       elem.addClass("p1-tb");
     }
+  }
 
   }
 

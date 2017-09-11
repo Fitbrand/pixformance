@@ -17316,14 +17316,17 @@ $(document).ready(function () {
   function checkNavigationAnimation() {
     var elem = $("#masthead");
 
-    var scroll = $(window).scrollTop();
+    if ($("#masthead").hasClass("no-scroll")) {} else {
 
-    if (scroll > 100) {
-      elem.addClass("active");
-      elem.removeClass("p1-tb");
-    } else {
-      elem.removeClass('active');
-      elem.addClass("p1-tb");
+      var scroll = $(window).scrollTop();
+
+      if (scroll > 100) {
+        elem.addClass("active");
+        elem.removeClass("p1-tb");
+      } else {
+        elem.removeClass('active');
+        elem.addClass("p1-tb");
+      }
     }
   }
 

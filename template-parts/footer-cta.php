@@ -1,4 +1,4 @@
-<?php if(get_field('show_footer_cta')) : ?>
+<?php if(get_field('show_footer_cta') || is_singular('post') ) : ?>
   <?php $cta = get_field('cta_footer', 'option'); ?>
   <?php if($cta) : ?>
     <?php $image = $cta['background_image']; 

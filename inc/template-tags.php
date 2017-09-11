@@ -13,9 +13,6 @@ if ( ! function_exists( '_pixformance_posted_on' ) ) :
 	 */
 	function _pixformance_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
 
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
@@ -26,17 +23,13 @@ if ( ! function_exists( '_pixformance_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', '_pixformance' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	
+			$time_string
 		);
 
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', '_pixformance' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
+		
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on"><strong>'.		esc_html_x( 'Published on',  '_pixformance' ) .'</strong><br/> ' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -52,15 +45,10 @@ if ( ! function_exists( '_pixformance_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', '_pixformance' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '_pixformance' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links"><strong>'. esc_html__( 'Category', '_pixformance' ) .'</strong><br />' . esc_html__( '%1$s', '_pixformance' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', '_pixformance' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', '_pixformance' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-			}
+
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
