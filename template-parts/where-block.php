@@ -7,9 +7,9 @@
     ?>
 <div class="wrapper bg-gray-light">
   <div class="layout">
-    <div class="where-block p6-tb">
+    <div class="where-block p6-tb p1-lr">
       <div class="p1-lr">
-      <img src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
+        <img class="m3-b-small" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
       </div>
       <div class="push-right w-third v-center-spaced">
         <h2 class="f2 m3-b w-full"><?php echo $title; ?></h2>

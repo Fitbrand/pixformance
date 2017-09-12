@@ -18,7 +18,7 @@
         <?php endforeach; ?>
       </div>
       <div>
-        <img src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
+        <img class="m3-b-small" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
       </div>
       <div class="v-center-spaced">
       <?php foreach($row2 as $item):  ?>

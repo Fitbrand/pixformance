@@ -14,6 +14,8 @@ var $ = require("jquery/src/jquery");
 // You can also "require" any script from its location in the node modules folder. Webpack often knows what to look for, but you can add a script directly like this:
 // var javascriptthingy = require('name/folder/file.js');
 
+require('./navigation');
+
 $(document).ready(function() {
   function isElementInViewport(elem) {
     var elem = $(elem);

@@ -7,7 +7,7 @@
     ?>
     <div class="wrapper">
       <div class="grid-halves">
-        <div class="filled" style="background-image: url('<?php echo $image; ?>')">
+        <div class="filled p9-t p9-b" style="background-image: url('<?php echo $image; ?>')">
           &nbsp;
         </div>
         <div class="bg-purple p9-t white p1-lr text-center">
