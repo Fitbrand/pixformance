@@ -1,7 +1,7 @@
 <?php if( have_rows('grid_icon_blocks') ): ?>
 <div class="wrapper">
-  <div class="layout p6-t m9-b">
-    <div class="grid-icon-grid m3-b">
+  <div class="layout p6-t m9-b p3-lr">
+    <div class="icon-grid m3-b">
     <?php $i = 1; while( have_rows('grid_icon_blocks') ): the_row(); 
       // vars
       $image = get_sub_field('image');
@@ -9,7 +9,7 @@
       $title = get_sub_field('title');
       $link = get_field('download_case_study');
       ?>
-      <div>
+      <div class="m3-b">
         <?php if($image) : ?>
           <img class="m3-b" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
         <?php endif; ?>

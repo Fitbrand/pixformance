@@ -6,7 +6,7 @@
   $form = $cta['form'];
 ?>
 <div class="wrapper bg-gray-light clearfix">
-  <div class="layout p9-t m9-b">
+  <div class="layout p9-t m9-b p3-lr">
     <div class="w-half">
       <h4 class="f3 m6-b"><?php echo $title; ?></h4>
       <?php echo do_shortcode($form); ?>

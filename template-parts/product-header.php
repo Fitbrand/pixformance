@@ -8,10 +8,10 @@
 	<div class="wrapper bg-gray-light">
 		<div class="h-full layout v-center p3-lr">
       <div class="grid-3-1">
-        <div class=" v-center-spaced">
+        <div class="v-center-spaced p6-t-small">
           <h1 class="f-headline m6-b"><?php echo $title; ?></h1>
         </div>
-      <div><img style="max-width: 500px" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" alt=""></div>
+      <div class="v-center "><img class="w-medium" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" alt=""></div>
       </div>
 		</div>
   </div>

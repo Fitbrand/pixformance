@@ -12,7 +12,7 @@
 get_header(); ?>
 
 <div class="wrapper bg-yellow-light ">
-	<div class="h-full layout v-center p3-lr text-center">
+	<div class="h-full layout v-center p3-lr text-center p6-t-small">
 		<div class="w-half-extra center">
 			<h1 class="f-2 m3-b"><?php the_field('about_header');?></h1>
 		</div>

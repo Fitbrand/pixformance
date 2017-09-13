@@ -20,20 +20,20 @@ get_header(); ?>
 ?>
 
 <div class="wrapper  bg-gray-light clearfix">
-  <div class="layout p9-t">
+  <div class="layout p9-t p3-lr m6-b">
     <h1 class="m6-b"><sup>01</sup> Imprint</h1>
 
     <div class="grid-fourths m6-b">
-      <div>
+      <div class="m3-b">
         <?php echo $column1; ?>
       </div>
-      <div>
+      <div class="m3-b">
         <?php echo $column2; ?>
       </div>
-      <div>
+      <div class="m3-b">
         <?php echo $column3; ?>
       </div>
-      <div>
+      <div class="m3-b">
       <?php echo $column4; ?>
       </div>
     </div>
@@ -43,10 +43,10 @@ get_header(); ?>
 <?php endif; ?>
 
 <div class="wrapper bg-gray-light clearfix">
-  <div class="layout p9-t m9-b">
+  <div class="layout  m9-b p3-lr">
     <div class="grid-1-3">
       <div>&nbsp;</div>
-      <div>
+      <div class="break">
             <?php
             while ( have_posts() ) : the_post();
 

@@ -27,10 +27,9 @@ get_header(); ?>
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 			$image = $image[0];
 		?>
-
 				<a class="blog-grid-item no-underline" href="<?php the_permalink(); ?>">
-					<img  src="<?php echo $image; ?>" alt="">
-					<div class="label-on-top">
+					<img class="cover-large"  src="<?php echo $image; ?>" alt="">
+					<div class="label-on-top p3-lr">
 					<span class="ttu m1-b block "><?php echo get_the_category()[0]->name; ?></span>
 				<h2 class="f2"><?php the_title(); ?></h2>
 				</div>
@@ -62,8 +61,10 @@ get_header(); ?>
 					?>
 					<a class="blog-grid-item no-underline" href="<?php the_permalink(); ?>">
 							<img class="cover m3-b" src="<?php echo $image; ?>" alt="">
+							<div class="p3-lr">
 							<span class="ttu m1-b block"><?php echo get_the_category()[0]->name; ?></span>
 						<h2 class="f3"><?php the_title(); ?></h2>
+						</div>
 					</a>
 					<?php endif; ?>
 				<?php endwhile;

@@ -17,7 +17,7 @@ html {
 body {
   font-family: var(--font-family);
   font-size: 16px;
-  color: var(--black)
+  color: var(--black);
 }
 
 /*
@@ -52,21 +52,19 @@ p {
 a {
   color: var(--black);
 
-
   &:hover {
-    color: var(--gray)
+    color: var(--gray);
   }
 }
-
 
 /*
  * Images
  */
 
-
 img {
   max-width: 100%;
   vertical-align: top;
+  height: auto;
 }
 
 /*
@@ -81,7 +79,7 @@ img {
   white-space: nowrap;
   display: inline-block;
   line-height: 1rem;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   text-transform: uppercase;
   min-width: 180px;
   text-align: center;
@@ -93,7 +91,7 @@ img {
 
 .button-secondary {
   background-color: var(--white);
-  color: var(--black)
+  color: var(--black);
 }
 
 .button + .button {
@@ -108,22 +106,21 @@ img {
   display: none;
   @media (--breakpoint-mobile-only) {
     display: block;
-
   }
 }
 
 .video-player {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
 }
 .video-player iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .clearfix:after {
@@ -132,67 +129,70 @@ img {
   clear: both;
 }
 
-
 .youtube {
-	background-color: #000;
-	margin-bottom: 30px;
-	position: relative;
-	padding-top: 56.25%;
-	overflow: hidden;
-	cursor: pointer;
+  background-color: #000;
+  margin-bottom: 30px;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  cursor: pointer;
 }
 .youtube img {
-	width: 100%;
-	top: -16.82%;
-	left: 0;
-	opacity: 0.7;
+  width: 100%;
+  top: -16.82%;
+  left: 0;
+  opacity: 0.7;
 }
 .youtube .play-button {
   z-index: 15;
 }
 .youtube .play-button:before {
-
 }
 
 .icon-play {
-  width: 90px;
-  height: 90px;
-  transition: all .2s ease-in;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease-in;
+  margin-left: -20px;
   text-transform: uppercase;
- &:hover {
-
+  &:hover {
     transform: translateY(-5px);
+  }
+
+  @media (--breakpoint-medium) {
+    width: 90px;
+    height: 90px;
+    margin-left: -45px;
   }
 
 }
 
 .youtube img,
 .youtube .play-button {
-	cursor: pointer;
+  cursor: pointer;
 }
 .youtube img,
 .youtube iframe,
 .youtube .play-button,
 .youtube .play-button:before {
-	position: absolute;
+  position: absolute;
 }
 .youtube .play-button,
 .youtube .play-button:before {
-	top: 50%;
-	left: 50%;
+  top: 50%;
+  left: 50%;
 }
 .youtube iframe {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
-
-.list{
+.list {
   margin: 0 0 0 1rem;
   padding: 0;
- & li {
-   margin-bottom: 1rem;
- }
+  & li {
+    margin-bottom: 1rem;
+  }
 }

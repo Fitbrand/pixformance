@@ -10,20 +10,20 @@
     ?>
     <div class="w-large center">
     <?php if($position === 'left'): ?>
-    <div class="grid-1-3 m9-b v-align-center">
-<div><img style="max-height: 220px; <?php if($size): ?> max-width: <?php echo $size;?>px; <?php endif; ?>" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" alt=""></div>
+    <div class="grid-1-3 m9-b v-align-center p3-lr">
+      <div><img class="m3-b" style="max-height: 220px; <?php if($size): ?> max-width: <?php echo $size;?>px; <?php endif; ?>" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" alt=""></div>
       <div>
         <h3 class="f3 m2-b"><?php echo $title; ?></h3>
         <?php echo $content; ?>
       </div>
     </div>
     <?php else: ?>
-    <div class="grid-3-1 m9-b v-align-center">
-      <div>
+    <div class="grid-3-1 grid-3-1-reversed m6-b v-align-center p3-lr">
+      <div><img class="m3-b" style="max-height: 220px; <?php if($size): ?> max-width: <?php echo $size;?>px; <?php endif; ?>" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" alt=""></div>
+      <div class="m3-b">
         <h3 class="f3 m2-b"><?php echo $title; ?></h3>
         <?php echo $content; ?>
       </div>
-      <div><img style="max-height: 220px; <?php if($size): ?> max-width: <?php echo $size;?>px; <?php endif; ?>" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" alt=""></div>
     </div>
     <?php endif; ?>
     </div>

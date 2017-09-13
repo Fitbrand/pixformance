@@ -12,7 +12,7 @@
 get_header(); ?>
 
 <div class="wrapper bg-yellow-light clearfix">
-  <div class="layout p9-t m6-b">
+  <div class="layout p9-t m6-b p3-lr">
     <div class="w-third-extra m6-b">
       <h1 class="f1 m3-b">Join our Team!</h1>
       <p>We're an established Berlin based start-up, making the best fitness and rehab training experience in the world. We're currently looking for talented people to join our international team. See our open positions below.</p>
@@ -64,7 +64,7 @@ get_header(); ?>
 ?>
 
     <div class="wrapper border-bottom clearfix" id="item-<?php the_id(); ?>">
-      <div class="layout p6-t m3-b">
+      <div class="layout p6-t m3-b p3-lr">
         <h2 class="f2 m3-b"><sup>0<?php echo $i; ?></sup> <?php the_title(); ?></h2>
         <div class="m6-b w-third-extra"><?php the_content(); ?></div>
         <div class="grid-fourths grid-space m3-b">
@@ -74,16 +74,16 @@ get_header(); ?>
               $looking = $block['looking'];
               $offer = $block['offer'];
             ?>
-          <div>
+          <div class="m3-b">
             <?php echo $tasks; ?>
           </div>
-          <div>
+          <div class="m3-b">
           <?php echo $challenges; ?>
           </div>
-          <div>
+          <div class="m3-b">
           <?php echo $looking; ?>
           </div>
-          <div>
+          <div class="m3-b">
           <?php echo $offer; ?>
           </div>
         </div>
@@ -102,7 +102,7 @@ get_header(); ?>
     ?>
     <div class="wrapper">
       <div class="grid-halves">
-        <div class="filled" style="background-image: url('<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>')">
+        <div class="filled p9-t p9-b" style="background-image: url('<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>')">
           &nbsp;
         </div>
         <div class="bg-purple p9-t white p1-lr text-center">

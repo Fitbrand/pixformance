@@ -8,7 +8,7 @@
 
 .f-headline {
   font-size: 2rem;
-  @media (--breakpoint-small) {
+  @media (--breakpoint-medium) {
     font-size: 3rem;
   }
 }
@@ -266,7 +266,7 @@ sup {
 
 .p9-t {
   padding-top: 6rem;
-  @media (--breakpoint-small) {
+  @media (--breakpoint-medium) {
     padding-top: 9rem;
   }
 }
@@ -369,39 +369,134 @@ sup {
  * Grids
  */
 
-.grid-1-3 {
-  display: grid;
-  grid-template-columns: 1.5fr 3fr;
-  grid-column-gap: 6rem;
+
+
+.grid {
+
+  /* Fallback: create equal heights of items for non grid browsers like Edge */
+  @supports not (display: grid) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
 }
+
+ @media all and (-ms-high-contrast:none)
+{
+  .grid { 
+    display: flex;
+    flex-flow: row wrap;
+  } /* IE10 */
+  
+  *::-ms-backdrop, .grid {
+    display: flex;
+    flex-flow: row wrap;
+  } /* IE11 */
+}
+
+
+
+.grid-1-3 {
+   @media (--breakpoint-small) {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-column-gap: 6rem;
+  }
+}
+
+.grid-1-3-reversed {
+    & div:nth-child(1) {
+    order: 2;
+  }
+}
+
 .grid-3-1 {
-  display: grid;
-  grid-template-columns: 3fr 1.5fr;
-  grid-column-gap: 6rem;
+  @media (--breakpoint-small) {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-column-gap: 6rem;
+  }
+}
+
+.grid-3-1-reversed {
+  & div:nth-child(1) {
+    order: 2;
+  }
 }
 
 .grid-halves {
-  @media (--breakpoint-small) {
+  @media (--breakpoint-medium) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 .grid-thirds {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  @media (--breakpoint-small) {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+  }
 }
 
 .grid-fourths {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media (--breakpoint-small) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (--breakpoint-medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .grid-sixes {
   @media (--breakpoint-small) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+
+    /* Fallback */
+    & > .grid-item {
+      width: calc(33% - 2rem);
+    }
+    /* End fallback */
+
+
+  }
+  @media (--breakpoint-medium) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 3rem;
+    
+    /* Fallback */
+    & > .grid-item {
+      width: calc(16.65% - 2rem);
+    }
+    /* End fallback */
   }
+}
+
+.grid-item{
+  position: relative;
+
+  /* Fallback */
+  float: left;
+  width: 100%;
+
+  @media(--breakpoint-small) {
+    margin-right: 1rem;
+  }
+
+  @supports (display: grid) {
+    width: auto !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    float: none !important;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  /* End fallback */
 }
 
 .grid-space {
@@ -415,7 +510,7 @@ sup {
 }
 .grid-image-right {
   & div:nth-child(1) {
-    //order: 1;
+    order: 1;
   }
 }
 
@@ -436,6 +531,9 @@ sup {
 }
 
 .w-medium {
+  @media (--breakpoint-medium) {
+    max-width: 500px;
+  }
 }
 
 .w-large {
@@ -459,7 +557,9 @@ sup {
 }
 
 .w-third-extra {
-  max-width: calc(var(--site-width) * 0.33 + 5);
+  @media (--breakpoint-medium) {
+    max-width: calc(var(--site-width) * 0.33 + 5);
+  }
 }
 
 /*
@@ -470,6 +570,11 @@ sup {
   min-height: 100vh;
 }
 
+.h-item-1 {
+  height: 100vh;
+  max-height: 400px;
+}
+
 .h-100 {
   height: 100%;
 }
@@ -477,6 +582,8 @@ sup {
 .h-90 {
   height: 90%;
 }
+
+
 
 /*
  * Hover effects
@@ -494,13 +601,19 @@ sup {
  * Positions
  */
 
+.relative {
+  position: relative;
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
 }
 
 .push-right {
+  @media (--breakpoint-medium) {
   margin-left: auto;
+  }
 }
 
 /*
@@ -515,6 +628,10 @@ sup {
   font-style: italic;
 }
 
+.break {
+  word-wrap: break-word;
+}
+
 /*
  * Background styles
  */
@@ -523,6 +640,18 @@ sup {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.bg-hide-small{
+  @media (--breakpoint-mobile-only) {
+    background: none !important;
+  }
+}
+
+.bg-show-small{
+  @media (--breakpoint-medium) {
+    background: none !important;
+  }
 }
 
 /*

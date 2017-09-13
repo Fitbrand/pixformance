@@ -26,8 +26,11 @@ get_header(); ?>
 					<img src="<?php echo $image; ?>" alt="">
 				</header><!-- .entry-header -->
 				<?php endif; ?>
-
-						<div class="grid-1-3 m6-b">
+						<div class="grid-1-3 grid-1-3-reversed m6-b p3-lr">
+							<div>
+								<?php the_title( '<h1 class="f2 m3-b">', '</h1>' );  ?>
+								<?php the_content(); ?>
+							</div>
 							<div class="p6-t">
 								<div class="m1-b">
 								<?php _pixformance_posted_on(); ?>
@@ -37,10 +40,6 @@ get_header(); ?>
 								</div>
 								<p><a href="#" class="button">Contact us</a></p>
 						</div>
-					<div>
-						<?php the_title( '<h1 class="f2 m3-b">', '</h1>' );  ?>
-						<?php the_content(); ?>
-					</div>
 				</div>
 				<div>
 				<?php 

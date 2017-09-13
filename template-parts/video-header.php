@@ -15,7 +15,7 @@
   </div>
   <div class="video-content-wrapper white">
     <div class="layout">
-      <div class="video-content">
+      <div class="video-content p3-lr">
         <h1><?php echo $title; ?></h1>
         </div>
       </div>

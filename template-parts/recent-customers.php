@@ -1,6 +1,6 @@
 <?php if(get_field('show_download_cta')) : ?>
 <div class="wrapper bg-gray white clearfix">
-  <div class="layout p6-t m6-b text-center">
+  <div class="layout p6-t m6-b text-center p3-lr">
     <h4 class="f2 m6-b">Meet some of our happy customers</h4>
     <div class="grid-thirds">
     <?php 
