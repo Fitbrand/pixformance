@@ -7,8 +7,8 @@
   ?>
 <div class="wrapper bg-gray-light clearfix">
   <div class="layout p3-lr">
-    <div class="usps m6-b p3-t">
-      <div class="v-center-spaced">
+    <div class="grid usps m6-b p3-t">
+      <div class="grid-item v-center-spaced">
       <?php foreach($row1 as $item):  ?>
       <?php $title = $item['title']; $text = $item['content']; ?>
         <div class="m6-b w-full m0-last text-right">
@@ -17,10 +17,10 @@
         </div>
         <?php endforeach; ?>
       </div>
-      <div>
+      <div class="grid-item">
         <img class="m3-b-small" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
       </div>
-      <div class="v-center-spaced">
+      <div class="grid-item v-center-spaced">
       <?php foreach($row2 as $item):  ?>
       <?php $title = $item['title']; $text = $item['content']; ?>
         <div class="m6-b w-full m0-last">

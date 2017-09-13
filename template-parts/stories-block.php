@@ -1,7 +1,7 @@
 <div class="wrapper bg-gray-medium clearfix">
   <div class="layout p9-t m9-b p3-lr">
   <h2 class="f2 ttu text-center m6-b">Success stories</h2>
-  <div class="stories">
+  <div class="grid grid-halves grid-gap-medium">
 
   <?php 
 
@@ -22,7 +22,7 @@
             $queryStories->the_post();
   ?>
 
-        <a href="#" class="no-underline black block m3-b hover-effect story-featured bg-white text-center p6 p3-t">
+        <a href="#" class="grid-item no-underline black block m3-b hover-effect story-featured bg-white text-center p6 p3-t">
           <span class="story-featured-image-wrapper m1-b"><?php echo  wp_get_attachment_image( get_post_thumbnail_id($post->ID), 'full', '', ["class" => "story-featured-image"] ); ?></span>
           <p><?php the_field('excerpt'); ?></p>
         </a>

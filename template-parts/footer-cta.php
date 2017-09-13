@@ -6,11 +6,11 @@
       $link = $cta['link'];
     ?>
     <div class="wrapper">
-      <div class="grid-halves">
-        <div class="filled p9-t p9-b" style="background-image: url('<?php echo $image; ?>')">
+      <div class="grid grid-halves">
+        <div class="grid-item filled p9-t p9-b" style="background-image: url('<?php echo $image; ?>')">
           &nbsp;
         </div>
-        <div class="bg-purple p9-t white p1-lr text-center">
+        <div class="grid-item bg-purple p9-t white p1-lr text-center">
           <a href="<?php echo $link; ?>" class="m7-b inline-block f2 white no-underline w-small l-large italic"><?php echo $content; ?></a>
         </div>
       </div>

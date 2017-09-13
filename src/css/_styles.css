@@ -298,6 +298,19 @@
   @media (--breakpoint-small) {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+
+    /* Fallback */
+    & > .grid-item:nth-child(1) {
+      width: 25%;
+    }
+    & > .grid-item:nth-child(2) {
+      width: 50%;
+    }
+    & > .grid-item:nth-child(3) {
+      width: 25%;
+    }
+    /* End fallback */
+
   }
 }
 
@@ -309,18 +322,16 @@
   }
 }
 
-.where-block {
-  @media (--breakpoint-small) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 6rem;
-  }
-}
 
 .workout-mockup {
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   @media (--breakpoint-medium) {
     max-width: 460px;
+  }
+  @supports not (display: grid) {
+    
+      float: right;
+    
   }
 }
 

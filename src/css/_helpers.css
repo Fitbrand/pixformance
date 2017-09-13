@@ -394,7 +394,32 @@ sup {
   } /* IE11 */
 }
 
+.grid-gap-medium {
+  @media (--breakpoint-small) {
+    grid-column-gap: 3rem;
+  }
+}
 
+.grid-halves.grid-gap-medium {
+   @media (--breakpoint-small) {
+    /* Fallback */
+    & > .grid-item {
+      margin-right: 3rem;
+      width: calc(50% - 3rem)
+    }
+
+
+
+    /* End fallback */
+   }
+}
+
+
+.grid-gap-large {
+  @media (--breakpoint-small) {
+    grid-column-gap: 6rem;
+  }
+}
 
 .grid-1-3 {
    @media (--breakpoint-small) {
@@ -428,6 +453,11 @@ sup {
   @media (--breakpoint-medium) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+     /* Fallback */
+    & > .grid-item {
+      width: 50%;
+    }
+    /* End fallback */
   }
 }
 
@@ -469,7 +499,8 @@ sup {
     
     /* Fallback */
     & > .grid-item {
-      width: calc(16.65% - 2rem);
+      width: calc(16.65% - 1rem);
+      margin-right: 1rem;
     }
     /* End fallback */
   }
@@ -482,9 +513,7 @@ sup {
   float: left;
   width: 100%;
 
-  @media(--breakpoint-small) {
-    margin-right: 1rem;
-  }
+
 
   @supports (display: grid) {
     width: auto !important;
