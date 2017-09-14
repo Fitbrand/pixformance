@@ -11,7 +11,7 @@
       <div class="grid-item p1-lr">
         <img class="m3-b-small" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
       </div>
-      <div class="grid-item push-right w-third v-center-spaced">
+      <div class="grid-item push-right w-third v-center-spaced-column ">
         <h2 class="f2 m3-b w-full"><?php echo $title; ?></h2>
         <p class="m3-b w-full"><?php echo $content; ?></p>
         <?php echo do_shortcode($form); ?>

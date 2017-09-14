@@ -319,7 +319,7 @@ img {
 		width: 90px;
 		height: 90px;
 		margin-left: -45px;
-	}
+	} 
   }
 
 .youtube img,
@@ -859,6 +859,20 @@ sup {
 	}
   }
 
+.grid-thirds.grid-gap-large {
+  }
+
+@media (min-width: 26rem) {
+
+	.grid-thirds.grid-gap-large {/* Fallback *//* End fallback */
+	}
+
+	.grid-thirds.grid-gap-large > .grid-item {
+		margin-right: 3rem;
+		width: calc(33% - 3rem);
+	}
+   }
+
 .grid-1-3 {
 }
 
@@ -867,15 +881,35 @@ sup {
 	.grid-1-3 {
 		display: grid;
 		grid-template-columns: 1.5fr 3fr;
-		grid-column-gap: 6rem;
+		grid-column-gap: 6rem;/* Fallback *//* End fallback */
 	}
+
+	.grid-1-3 > .grid-item {
+		margin-right: 3rem;
+		width: calc(33% - 3rem);
+	}
+
+	.grid-1-3 > .grid-item:nth-child(2) {
+		width: calc(66% - 3rem);
+	}
+
   }
 
 .grid-1-3-reversed {
+
+
 }
 
-.grid-1-3-reversed div:nth-child(1) {
+.grid-1-3-reversed > .grid-item:nth-child(1) {
 	order: 2;
+	margin-right: 0;
+	width: calc(66% - 3rem);
+}
+
+.grid-1-3-reversed > .grid-item:nth-child(2) {
+	order: 1;
+	margin-right: 3rem;
+	width: calc(33% - 3rem);
 }
 
 .grid-3-1 {
@@ -886,15 +920,32 @@ sup {
 	.grid-3-1 {
 		display: grid;
 		grid-template-columns: 3fr 1.5fr;
-		grid-column-gap: 6rem;
+		grid-column-gap: 6rem;/* Fallback *//* End fallback */
+	}
+
+	.grid-3-1 > .grid-item {
+		margin-right: 3rem;
+		width: calc(66% - 3rem);
+	}
+
+	.grid-3-1 > .grid-item:nth-child(2) {
+		width: calc(33% - 3rem);
 	}
   }
 
 .grid-3-1-reversed {
 }
 
-.grid-3-1-reversed div:nth-child(1) {
+.grid-3-1-reversed > .grid-item:nth-child(1) {
 	order: 2;
+	margin-right: 0;
+	width: calc(33% - 3rem);
+}
+
+.grid-3-1-reversed > .grid-item:nth-child(2) {
+	order: 1;
+	margin-right: 3rem;
+	width: calc(66% - 3rem);
 }
 
 .grid-halves {
@@ -919,8 +970,13 @@ sup {
 
 	.grid-thirds {
 		grid-template-columns: 1fr 1fr 1fr;
-		display: grid;
+		display: grid;/* Fallback *//* End fallback */
 	}
+
+	.grid-thirds > .grid-item {
+		width: calc(33% - 1rem);
+	}
+
   }
 
 .grid-fourths {
@@ -930,7 +986,12 @@ sup {
 
 	.grid-fourths {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;/* Fallback *//* End fallback */
+	}
+
+	.grid-fourths > .grid-item {
+		width: calc(50% - 1rem);
+		margin-right: 1rem;
 	}
   }
 
@@ -938,7 +999,12 @@ sup {
 
 	.grid-fourths {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;/* Fallback *//* End fallback */
+	}
+
+	.grid-fourths > .grid-item {
+		width: calc(25% - 1rem);
+		margin-right: 1rem;
 	}
   }
 
@@ -986,7 +1052,6 @@ sup {
 
 	.grid-item {
 		width: auto !important;
-		margin-bottom: 0 !important;
 		margin-right: 0 !important;
 		float: none !important;
 	}
@@ -1075,12 +1140,18 @@ sup {
  */
 
 .h-full {
+  height: 100vh;
   min-height: 100vh;
 }
 
 .h-item-1 {
   height: 100vh;
   max-height: 400px;
+}
+
+.h-item-2 {
+  height: 100vh;
+  max-height: 700px;
 }
 
 .h-100 {
@@ -1200,6 +1271,13 @@ sup {
 }
 
 .v-center-spaced {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  justify-content: center;
+}
+
+.v-center-spaced-column {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1629,7 +1707,6 @@ sup {
 	.workout-mockup {
 		float: right;
 	}
-    
   }
 
 /*
@@ -1778,18 +1855,6 @@ input[type="submit"] {
 	}
   }
 
-.icon-grid {
-}
-
-@media (min-width: 42rem) {
-
-	.icon-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-column-gap: 6rem;
-	}
-   }
-
 .blog-grid {
 
 }
@@ -1799,7 +1864,12 @@ input[type="submit"] {
 	.blog-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 1rem;
+		grid-gap: 1rem;/* Fallback *//* End fallback */
+	}
+
+	.blog-grid > .grid-item {
+		width: calc(50% - 1rem);
+		margin-right: 1rem;
 	}
   }
 
@@ -1807,7 +1877,12 @@ input[type="submit"] {
 
 	.blog-grid {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 3rem;
+		grid-gap: 3rem;/* Fallback *//* End fallback */
+	}
+
+	.blog-grid > .grid-item {
+		width: calc(50% - 1rem);
+		margin-right: 1rem;
 	}
   }
 
@@ -1860,7 +1935,25 @@ input[type="submit"] {
 	.cover {
 		height: 590px;
 	}
+
+	@supports not (display: grid) {
+
+		.cover {
+			height: 340px;
+		}
+	}
   }
+
+@media all and (-ms-high-contrast:none)
+{
+  .cover { 
+    height: auto;
+  } /* IE10 */
+  
+  *::-ms-backdrop, .cover {
+    height: auto;
+  } /* IE11 */
+}
 
 .cover-large {
   object-fit: cover;

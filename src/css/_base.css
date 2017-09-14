@@ -162,7 +162,7 @@ img {
   @media (--breakpoint-medium) {
     width: 90px;
     height: 90px;
-    margin-left: -45px;
+    margin-left: -45px; 
   }
 
 }

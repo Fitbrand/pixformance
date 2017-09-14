@@ -2,6 +2,8 @@ var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack = require("webpack");
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   entry: {
     app: "./js/main.js"
@@ -45,6 +47,10 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin("main.css"),
+    new CopyWebpackPlugin([
+      { from: 'favicon/**/*', to: '../dist' },
+      { from: 'images/**/*', to: '../dist' },
+    ]),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"

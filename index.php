@@ -27,7 +27,7 @@ get_header(); ?>
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 			$image = $image[0];
 		?>
-				<a class="blog-grid-item no-underline" href="<?php the_permalink(); ?>">
+				<a class="m3-b block no-underline" href="<?php the_permalink(); ?>">
 					<img class="cover-large"  src="<?php echo $image; ?>" alt="">
 					<div class="label-on-top p3-lr">
 					<span class="ttu m1-b block "><?php echo get_the_category()[0]->name; ?></span>
@@ -47,7 +47,7 @@ get_header(); ?>
 <div class="wrapper m6-b">
 	<div class="layout">
 		<h3 class="f3 ttu text-center m6-b"><?php esc_html_e( 'Latest stories', '_pixformance' ); ?></h3>
-		<div class="blog-grid">
+		<div class="gird blog-grid clearfix">
 		<?php
 			$the_query = new WP_Query( array( 'post__not_in' => get_option( 'sticky_posts' ) ) );
 			if ( $the_query->have_posts() ) :
@@ -59,7 +59,7 @@ get_header(); ?>
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 						$image = $image[0];
 					?>
-					<a class="blog-grid-item no-underline" href="<?php the_permalink(); ?>">
+					<a class="m3-b block grid-item blog-grid-item no-underline" href="<?php the_permalink(); ?>">
 							<img class="cover m3-b" src="<?php echo $image; ?>" alt="">
 							<div class="p3-lr">
 							<span class="ttu m1-b block"><?php echo get_the_category()[0]->name; ?></span>

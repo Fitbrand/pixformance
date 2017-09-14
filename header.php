@@ -18,6 +18,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<?php get_template_part('template-parts/favicon');?>
 </head>
 
 <body <?php body_class(); ?>>

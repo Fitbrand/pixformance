@@ -26,21 +26,18 @@ get_header(); ?>
 					<img src="<?php echo $image; ?>" alt="">
 				</header><!-- .entry-header -->
 				<?php endif; ?>
-						<div class="grid-1-3 grid-1-3-reversed m6-b p3-lr">
-							<div>
+						<div class="grid grid-1-3 grid-1-3-reversed  m6-b p3-lr ">
+							<div class="grid-item">
 								<?php the_title( '<h1 class="f2 m3-b">', '</h1>' );  ?>
 								<?php the_content(); ?>
 							</div>
-							<div class="p6-t">
-								<div class="m1-b">
-								<?php _pixformance_posted_on(); ?>
-								</div>
-								<div class="m3-b">
-								<?php _pixformance_entry_footer(); ?>
-								</div>
+							<div class="grid-item p6-t">
+								<div class="m1-b"><?php _pixformance_posted_on(); ?></div>
+								<div class="m3-b"><?php _pixformance_entry_footer(); ?></div>
 								<p><a href="#" class="button">Contact us</a></p>
+							</div>
 						</div>
-				</div>
+			
 				<div>
 				<?php 
 					$images = get_field('gallery');
