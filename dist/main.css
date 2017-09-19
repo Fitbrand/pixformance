@@ -739,6 +739,10 @@ sup {
   margin-bottom: 2rem;
 }
 
+.m2-r {
+  margin-right: 2rem;
+}
+
 /* level 3 */
 
 .m3-b {
@@ -1373,6 +1377,7 @@ sup {
 
 .wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .wrapper-grid {
@@ -1857,31 +1862,7 @@ sup {
 }
 
 /*
- * Strokes
- */
 
-.stroke {
-  position: absolute;
-  z-index: -5;
-  height: 50px;
-  border-radius: 90px;
-  mix-blend-mode: hard-light;
-  transform: rotate(15deg);
-  width: 0;
-  max-width: 400px;
-}
-
-.stroke.active {
-  z-index: 5;
-}
-
-.pos-top {
-  top: 10rem;
-}
-
-.pos-right {
-  right: 10rem;
-}
 
 /*
  * Forms
@@ -1913,7 +1894,7 @@ input[type="submit"] {
 
 .form-field-naked input::placeholder {
 	font-size: 0.75rem;
-	font-weight: bold;
+	font-weight: 400;
 	text-transform: uppercase;
 }
 
@@ -2161,4 +2142,573 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 
 .admin-bar #masthead {
   top: 28px;
+}
+
+/*------------------------------------*\
+  #Strokes
+\*------------------------------------*/
+
+/*
+ * 404 page
+ */
+
+.layout {
+   position: relative;
+   z-index: 5;
+ }
+
+.strokes-wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  height: 100%;
+  overflow: hidden;
+  max-width: 100vw;
+  position: absolute;
+  opacity: .6;
+}
+
+.stroke {
+  position: absolute;
+  z-index: -5;
+  height: 50px;
+  border-radius: 90px;
+  
+}
+
+.stroke-404-1 {
+  transform: rotate(40deg);
+  background-color: #C22929;
+  top: 0;
+  mix-blend-mode: color-burn;
+  animation: animateStroke4041 .7s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+.stroke-404-2 {
+  transform: rotate(-30deg);
+  background-color: #4A3D91;
+  top: 20vw;
+  mix-blend-mode: color-burn;
+  animation: animateStroke4042 .8s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+.stroke-404-3 {
+  transform: rotate(-49deg);
+  background-color: #FFD900;
+  bottom: 0vw;
+  mix-blend-mode: color-burn;
+  animation: animateStroke4043 .9s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+.stroke-404-4 {
+  transform: rotate(49deg);
+  background-color: #58B9A4;
+  bottom: 25vw;
+  right: 20vw;
+  mix-blend-mode: color-burn;
+  animation: animateStroke4044 .9s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+@-webkit-keyframes animateStroke4041 {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  100% {
+    width: 90vw;
+    left: -30vw;
+  }
+}
+
+@-webkit-keyframes animateStroke4042 {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  100% {
+    width: 50vw;
+    right: -7vw;
+  }
+}
+
+@-webkit-keyframes animateStroke4043 {
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 70vw;
+  
+  }
+}
+
+@-webkit-keyframes animateStroke4044 {
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+/*
+ * Product page
+ */
+
+.stroke-product-1 {
+  background: #58B9A4;
+  transform: rotate(35deg);
+  bottom: 20vw;
+  right: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+    animation: animateStrokeProduct1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.stroke-product-2 {
+  background: #cfa3cb;
+  transform: rotate(35deg);
+  top: 20vh;
+  left: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-product-2.active {
+  animation: animateStrokeProduct1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.stroke-product-3 {
+  background: #cee9e3;
+  transform: rotate(-20deg);
+  top: 30vh;
+  right: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-product-3.active {
+  animation: animateStrokeProduct1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.stroke-product-4 {
+  background: #58b9a4;
+  transform: rotate(20deg);
+  top: 15vh;
+  left: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-product-4.active {
+  animation: animateStrokeProduct1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.stroke-product-5 {
+  background: #03318c;
+  transform: rotate(45deg);
+  top: 30vh;
+  right: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-product-5.active {
+  animation: animateStrokeProduct1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.stroke-product-6 {
+  background: #58b9a4;
+  transform: rotate(-25deg);
+  bottom: 40vh;
+  right: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-product-6.active {
+  animation: animateStrokeProduct1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeProduct1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 25vw;
+  }
+}
+
+@-webkit-keyframes animateStrokeProduct2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 25vw;
+  }
+}
+
+@-webkit-keyframes animateStrokeProduct3{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+@-webkit-keyframes animateStrokeProduct4{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+@-webkit-keyframes animateStrokeProduct5{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+@-webkit-keyframes animateStrokeProduct6{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+/*
+ * Out of Grid animations
+ */
+
+.stroke-out-grid {
+  background: #4f6fae;
+  transform: rotate(-35deg);
+  bottom: 40vh;
+  right: 40vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-out-grid.active {
+  animation: animateStrokeGrid1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeGrid1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+/*
+ * Where animations
+ */
+
+.stroke-where {
+  background: #03318c;
+  transform: rotate(-35deg);
+  bottom: 40vh;
+  right: 40vw;
+  mix-blend-mode: hard-light;
+  animation: animateStrokeGrid1 .7s ease-in;
+  animation-fill-mode: forwards;
+  z-index: 6;
+}
+
+@-webkit-keyframes animateStrokeGrid1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+/*
+ * Contact animations
+ */
+
+.stroke-contact-1 {
+  background: #03318c;
+  transform: rotate(35deg);
+  top: 20vh;
+  right: 10vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-contact-1.active {
+  animation: animateStrokeContact1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeContact1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 15vw;
+  }
+}
+
+/*
+ * Contact animations
+ */
+
+.stroke-footer-1 {
+  background: #891E82;
+  transform: rotate(-25deg);
+  top: 25vh;
+  left: 20vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-footer-1.active {
+  animation: animateStrokeStroke1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStroke1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 40vw;
+    left: 20vw;
+  }
+}
+
+/*
+ * Homepage animations
+ */
+
+.stroke-video-1 {
+  background: #58b9a4;
+  transform: rotate(35deg);
+  top: 50vh;
+  left: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 2;
+}
+
+.stroke-video-1.active {
+  animation: animateStrokeVideo1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeVideo1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+.stroke-story-1 {
+  background: #4f6fae;
+  transform: rotate(35deg);
+  top: 10vh;
+  left: -20vw;
+  mix-blend-mode: hard-light;
+  z-index: 2;
+  opacity: .8;
+}
+
+.stroke-story-1.active {
+  animation: animateStrokeStory1 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+.stroke-story-2 {
+  background: #ffd900;
+  transform: rotate(-45deg);
+  bottom: 10vh;
+  right: -20vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-story-2.active {
+  animation: animateStrokeStory2 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 31vw;
+  }
+}
+
+.stroke-usp-1 {
+  background: #58b9a4;
+  transform: rotate(-45deg);
+  top: 80vh;
+  left: -25vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-usp-1.active {
+  animation: animateStrokeUsp .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeUsp{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 45vw;
+  }
+}
+
+.stroke-motion-1 {
+  background: #58b9a4;
+  transform: rotate(25deg);
+  top: 54vh;
+  right: -25vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-motion-1.active {
+  animation: animateStrokeMotion .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeMotion{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 80vw;
+  }
+}
+
+.stroke-where-1 {
+  background: #58b9a4;
+  transform: rotate(-25deg);
+  bottom: -5vh;
+  right: 40vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-where-1.active {
+  animation: animateStrokeWhere .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeWhere{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 40vw;
+  }
+}
+
+.stroke-video-4 {
+  background: #ffd900;
+  transform: rotate(25deg);
+  bottom: 35vh;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+  animation: animateStrokeVideo .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeVideo{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+.stroke-video-5 {
+  background: #58b9a4;
+  transform: rotate(-25deg);
+  bottom: 45vh;
+  right: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+  animation: animateStrokeVideo2 .7s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeVideo2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 25vw;
+  }
 }

@@ -6,6 +6,7 @@
   $image =  $usps['image'];
   ?>
 <div class="wrapper bg-gray-light clearfix">
+<div class="stroke-usp-1 stroke stroke-scroll" id="usp-stroke-1"></div>
   <div class="layout p3-lr">
     <div class="grid usps m6-b p3-t">
       <div class="grid-item v-center-spaced-column">

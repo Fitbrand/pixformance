@@ -80,13 +80,21 @@ $(document).ready(function() {
   // Check if it's time to start the animation.
 
   function checkAnimation() {
-    var elem = $(".stroke");
+    var elem = $(".stroke-scroll");
     // If the animation has already been started
-    if (elem.hasClass("active")) return;
-    if (isElementInViewport(elem)) {
-      // Start the animation
-      elem.addClass("active").animate({ width: "30%" }, 700, "linear");
-    }
+    //if (elem.hasClass("active")) return;
+
+    elem.each(function(i, obj) {
+      if (isElementInViewport(obj)) {
+        var element = $(obj);
+        // Start the animation
+        if (element.length !== 0) {
+          var id = element.attr('id');
+          $('#' + id).addClass("active");
+        }
+      }
+    });
+
   }
 
   function checkNavigationAnimation() {
@@ -109,6 +117,7 @@ $(document).ready(function() {
   // Capture scroll events
   jQuery(window).scroll(function() {
     checkNavigationAnimation();
+    checkAnimation();
   });
 
   var lazyloadvideo = (function() {
@@ -152,19 +161,20 @@ $(document).ready(function() {
 
   var backgroundloadvideo = (function() {
     var youtube = $(".youtube-background");
+    if (youtube.length !== 0) {
+      var id = youtube[0].dataset.embed;
 
-    var id = youtube[0].dataset.embed;
+      var iframe = document.createElement("iframe");
 
-    var iframe = document.createElement("iframe");
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute(
+        "src",
+        "https://www.youtube.com/embed/" + id + "?rel=0&showinfo=0&autoplay=1&loop=1?controls=0"
+      );
 
-    iframe.setAttribute("frameborder", "0");
-    iframe.setAttribute("allowfullscreen", "");
-    iframe.setAttribute(
-      "src",
-      "https://www.youtube.com/embed/" + id + "?rel=0&showinfo=0&autoplay=1&loop=1?controls=0"
-    );
-
-    youtube.innerHTML = "";
-    youtube.append(iframe);
+      youtube.innerHTML = "";
+      youtube.append(iframe);
+    }
   })();
 });

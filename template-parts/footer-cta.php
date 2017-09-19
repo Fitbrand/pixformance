@@ -6,12 +6,16 @@
       $link = $cta['link'];
     ?>
     <div class="wrapper">
+      <div class="stroke-footer-1 stroke stroke-scroll" id="footer-stroke-1"></div>
       <div class="grid grid-halves">
         <div class="grid-item filled p9-t p9-b" style="background-image: url('<?php echo $image; ?>')">
           &nbsp;
         </div>
         <div class="grid-item bg-purple p9-t white p1-lr text-center">
-          <a href="<?php echo $link; ?>" class="m7-b inline-block f2 white no-underline w-small l-large italic"><?php echo $content; ?></a>
+          <div class="w-small m7-b inline-block">  
+          <span class="m1-b inline-block f2 white no-underline l-large italic"><?php echo $content; ?></span>
+          <a href="<?php echo $link; ?>" class="button"><?php esc_html_e( 'Contact us', '_pixformance' ); ?></a>
+          </div>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@
 
 .wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .wrapper-grid {
@@ -421,31 +422,7 @@
 }
 
 /*
- * Strokes
- */
 
-.stroke {
-  position: absolute;
-  z-index: -5;
-  height: 50px;
-  border-radius: 90px;
-  mix-blend-mode: hard-light;
-  transform: rotate(15deg);
-  width: 0;
-  max-width: 400px;
-}
-
-.stroke.active {
-  z-index: 5;
-}
-
-.pos-top {
-  top: 10rem;
-}
-
-.pos-right {
-  right: 10rem;
-}
 
 /*
  * Forms
@@ -475,7 +452,7 @@ input[type="submit"] {
 
   & input::placeholder {
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: 400;
     text-transform: uppercase;
   }
 

@@ -12,7 +12,7 @@
       <?php echo do_shortcode($form); ?>
     </div>
   </div>
-  <div class="stroke bg-purple pos-top pos-right">&nbsp;</div>
+  <div class="stroke-contact-1 stroke stroke-scroll" id="contact-stroke-1"></div>
 </div>
 <?php endif; ?>
 <?php endif; ?>

@@ -1,5 +1,7 @@
 <div class="wrapper bg-gray-medium clearfix" id="studies">
   <div class="layout p9-t m9-b p3-lr">
+  <div class="stroke-story-1 stroke stroke-scroll" id="story-stroke-1"></div>
+  <div class="stroke-story-2 stroke stroke-scroll" id="story-stroke-2"></div>
   <h2 class="f2 ttu text-center m6-b"><?php esc_html_e( 'Case studies', '_pixformance' ); ?></h2>
   <div class="grid grid-halves grid-gap-medium">
 

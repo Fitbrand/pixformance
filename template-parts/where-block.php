@@ -6,6 +6,7 @@
       $title = $block['title'];
     ?>
 <div class="wrapper bg-gray-light">
+<div class="stroke-where-1 stroke stroke-scroll" id="where-stroke-1"></div>
   <div class="layout">
     <div class="grid grid-halves grid-gap-large p6-tb p1-lr">
       <div class="grid-item p1-lr">

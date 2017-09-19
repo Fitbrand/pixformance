@@ -5,6 +5,7 @@
     ?>
 
 <div class="wrapper">
+  <div class="stroke-video-1 stroke stroke-scroll" id="video-stroke-1"></div>
   <div class="layout p9-t m9-b p3-lr">
     <h2 class="f2 ttu text-center m6-b"><?php echo $title; ?></h2>
     <div class="youtube youtube-lazy" data-embed="<?php echo $id; ?>" data-image="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" data-location="home">

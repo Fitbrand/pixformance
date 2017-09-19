@@ -15,9 +15,9 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/video-block' ); ?>
 
-	<?php get_template_part( 'template-parts/usp-block' ); ?>
-
 	<?php get_template_part( 'template-parts/stories-block' ); ?>
+
+	<?php get_template_part( 'template-parts/usp-block' ); ?>
 
 	<?php get_template_part( 'template-parts/motion-block' ); ?>
 

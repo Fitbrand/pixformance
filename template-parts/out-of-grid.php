@@ -4,8 +4,9 @@
       $content = $block['content'];
       $title = $block['title'];
     ?>
- <?php if($content) : ?>   
-<div class="wrapper wrapper-grid h-full">
+ <?php if($content) : ?>
+ <div class="wrapper">
+ <div class="wrapper-grid h-full">
   <div class="grid-item out-grid-content p6-t m9-b v-center-middle">
     <div class="w-third-extra p3-lr">
       <h2 class="f2 w-full m3-b"><?php echo $title; ?></h2>
@@ -16,5 +17,10 @@
     &nbsp;
   </div>
 </div>
+ <div class="stroke stroke-out-grid stroke-scroll" id="outgrid-stroke-1"></div>
+ 
+ 
+</div>   
+
 <?php endif; ?>
 <?php endif; ?>

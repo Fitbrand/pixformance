@@ -5,6 +5,7 @@
       $title = $block['title'];
     ?>
 <div class="wrapper">
+<div class="stroke-motion-1 stroke stroke-scroll" id="motion-stroke-1"></div>
 <div class="layout p3-lr">
   <div class="grid grid-halves grid-gap-large">
     <div class="grid-item v-center-spaced  p6-tb">

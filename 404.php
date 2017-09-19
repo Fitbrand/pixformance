@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="wrapper bg-gray-medium" >
+<div class="wrapper bg-gray-medium">
 	<div class="h-full layout v-center p3-lr">
 		<div class="w-third-extra">
 			<svg class="icon-404 m2-b">
@@ -24,5 +24,11 @@ get_header(); ?>
 	</div>
 </div>
 
+<div class="strokes-wrapper">
+	<div class="stroke-404-1 stroke"></div>
+	<div class="stroke-404-2 stroke"></div>
+	<div class="stroke-404-3 stroke"></div>
+	<div class="stroke-404-4 stroke"></div>
+</div>
 <?php
 get_footer();

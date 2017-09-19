@@ -8,9 +8,10 @@
 		$position = get_sub_field('image_position');
     $size = get_sub_field('image_size');
     ?>
-    <div class="w-large center">
-    <?php if($position === 'left'): ?>
-    <div class="grid grid-1-3 m9-b v-align-center p3-lr">
+    <div class="w-large center relative">
+      <?php if($position === 'left'): ?>
+    
+    <div class="grid grid-1-3 m9-b v-align-center p3-lr ">
       <div class="grid-item"><img class="m3-b" style="max-height: 220px; <?php if($size): ?> max-width: <?php echo $size;?>px; <?php endif; ?>" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" alt=""></div>
       <div class="grid-item">
         <h3 class="f3 m2-b"><?php echo $title; ?></h3>
