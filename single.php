@@ -34,7 +34,7 @@ get_header(); ?>
 							<div class="grid-item p6-t">
 								<div class="m1-b"><?php _pixformance_posted_on(); ?></div>
 								<div class="m3-b"><?php _pixformance_entry_footer(); ?></div>
-								<p><a href="#" class="button">Contact us</a></p>
+								<p><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="button">Contact us</a></p>
 							</div>
 						</div>
 			

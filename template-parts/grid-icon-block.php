@@ -2,7 +2,7 @@
 <div class="wrapper">
   <div class="layout p6-t m9-b p3-lr">
     <div class="grid grid-thirds grid-gap-large m3-b">
-    <?php $i = 1; while( have_rows('grid_icon_blocks') ): the_row(); 
+    <?php $x = 1; while( have_rows('grid_icon_blocks') ): the_row(); 
       // vars
       $image = get_sub_field('image');
       $content = get_sub_field('content');
@@ -13,12 +13,13 @@
         <?php if($image) : ?>
           <img class="m3-b" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
         <?php endif; ?>
-        <span class="blue m2-b block">_0<?php echo $i; ?></span>
+        <span class="blue m2-b block">_0<?php echo $x; ?></span>
         <h3 class="f2 m3-b"><?php echo $title; ?></h3>
         <?php echo $content; ?>
       </div>
-      <?php $i++; endwhile; ?>
+      <?php $x++; endwhile; ?>
     </div>
+  
     <footer class="text-center">
       <a href="<?php echo $link; ?>" class="button ttu">Download case study</a>
     </footer>

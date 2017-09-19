@@ -6,6 +6,7 @@
 *:after,
 *:before {
   box-sizing: border-box;
+  outline: none;
 }
 
 body,
@@ -19,6 +20,7 @@ body {
   font-size: 16px;
   color: var(--black);
 }
+
 
 /*
  * Headings
@@ -35,15 +37,16 @@ h5 {
   font-family: var(--font-family-heading);
 }
 
+
 /*
  * Paragraphs
  */
 
 p {
   line-height: 1.66em;
-  margin: 0 0 1rem;
-  //font-size: 1.25rem;
+  margin: 0 0 1rem; //font-size: 1.25rem;
 }
+
 
 /*
  * Links
@@ -51,11 +54,11 @@ p {
 
 a {
   color: var(--black);
-
   &:hover {
     color: var(--gray);
   }
 }
+
 
 /*
  * Images
@@ -66,6 +69,7 @@ img {
   vertical-align: top;
   height: auto;
 }
+
 
 /*
  * Button
@@ -94,7 +98,7 @@ img {
   color: var(--black);
 }
 
-.button + .button {
+.button+.button {
   margin-left: 1rem;
 }
 
@@ -111,10 +115,12 @@ img {
 
 .video-player {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   padding-top: 25px;
   height: 0;
 }
+
 .video-player iframe {
   position: absolute;
   top: 0;
@@ -137,16 +143,38 @@ img {
   overflow: hidden;
   cursor: pointer;
 }
+
 .youtube img {
-  width: 100%;
-  top: -16.82%;
+  width: 100%; //top: -16.82%;
+  top: 0;
   left: 0;
   opacity: 0.7;
 }
+
 .youtube .play-button {
   z-index: 15;
 }
-.youtube .play-button:before {
+
+.youtube .play-button:before {}
+
+.youtube-background {
+  &:after {
+    content: "";
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+    /* IE6-9 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
 }
 
 .icon-play {
@@ -158,30 +186,31 @@ img {
   &:hover {
     transform: translateY(-5px);
   }
-
   @media (--breakpoint-medium) {
     width: 90px;
     height: 90px;
-    margin-left: -45px; 
+    margin-left: -45px;
   }
-
 }
 
 .youtube img,
 .youtube .play-button {
   cursor: pointer;
 }
+
 .youtube img,
 .youtube iframe,
 .youtube .play-button,
 .youtube .play-button:before {
   position: absolute;
 }
+
 .youtube .play-button,
 .youtube .play-button:before {
-  top: 50%;
+  top: 47%;
   left: 50%;
 }
+
 .youtube iframe {
   height: 100%;
   width: 100%;

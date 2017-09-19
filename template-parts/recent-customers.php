@@ -1,4 +1,4 @@
-<?php if(get_field('show_download_cta')) : ?>
+<?php if(get_field('show_cases')) : ?>
 <div class="wrapper bg-gray white clearfix">
   <div class="layout p6-t m6-b text-center p3-lr">
     <h4 class="f2 m6-b">Meet some of our happy customers</h4>
@@ -22,9 +22,9 @@
             $queryStories->the_post();
   ?>
 
-        <a href="#" class="grid-item">
+        <span class="grid-item">
           <span class="recent-client-image-wrapper m1-b"><?php echo  wp_get_attachment_image( get_post_thumbnail_id($post->ID), 'full', '', ["class" => "story-featured-image filter-white"] ); ?></span>
-        </a>
+        </span>
 
           <?php } } wp_reset_postdata(); ?>
     </div>

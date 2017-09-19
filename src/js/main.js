@@ -14,9 +14,54 @@ var $ = require("jquery/src/jquery");
 // You can also "require" any script from its location in the node modules folder. Webpack often knows what to look for, but you can add a script directly like this:
 // var javascriptthingy = require('name/folder/file.js');
 
-require('./navigation');
+require("./navigation");
+
+var smoothScroll = function() {
+  // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top
+            },
+            1000,
+            function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) {
+                // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              }
+            }
+          );
+        }
+      }
+    });
+};
 
 $(document).ready(function() {
+  smoothScroll();
+
   function isElementInViewport(elem) {
     var elem = $(elem);
 
@@ -43,25 +88,22 @@ $(document).ready(function() {
       elem.addClass("active").animate({ width: "30%" }, 700, "linear");
     }
   }
-  
+
   function checkNavigationAnimation() {
     var elem = $("#masthead");
 
-    if($("#masthead").hasClass("no-scroll")) {
-      
+    if ($("#masthead").hasClass("no-scroll")) {
     } else {
-    
-    var scroll = $(window).scrollTop();
+      var scroll = $(window).scrollTop();
 
-    if(scroll > 100) {
-      elem.addClass("active");
-      elem.removeClass("p1-tb");
-    }else  {
-      elem.removeClass('active')
-      elem.addClass("p1-tb");
+      if (scroll > 100) {
+        elem.addClass("active");
+        elem.removeClass("p1-tb");
+      } else {
+        elem.removeClass("active");
+        elem.addClass("p1-tb");
+      }
     }
-  }
-
   }
 
   // Capture scroll events
@@ -69,43 +111,60 @@ $(document).ready(function() {
     checkNavigationAnimation();
   });
 
+  var lazyloadvideo = (function() {
+    var youtube = document.querySelectorAll(".youtube-lazy");
+    var videoContent = $(".video-content-wrapper");
 
-  var lazyloadvideo = function () {
-    
-      var youtube = document.querySelectorAll(".youtube");
-      var videoContent = $(".video-content-wrapper");;
-    
-      for (var i = 0; i < youtube.length; i++) {
-    
-    
-        var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/sddefault.jpg";
-        var location = youtube[i].dataset.location;
-    
-        var image = new Image();
-        if (location === 'home') {
-          image.src = youtube[i].dataset.image;
-        } else {
-          image.src = source;
-        }
-        image.addEventListener("load", function () {
+    for (var i = 0; i < youtube.length; i++) {
+      var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/sddefault.jpg";
+      var location = youtube[i].dataset.location;
+
+      var image = new Image();
+      if (location === "home") {
+        image.src = youtube[i].dataset.image;
+      } else {
+        image.src = source;
+      }
+      image.addEventListener(
+        "load",
+        (function() {
           youtube[i].appendChild(image);
-        }(i));
-    
-        youtube[i].addEventListener("click", function () {
+        })(i)
+      );
 
-          videoContent.addClass('hide');
-    
-          var iframe = document.createElement("iframe");
-    
-          iframe.setAttribute("frameborder", "0");
-          iframe.setAttribute("allowfullscreen", "");
-          iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=1");
-    
-          this.innerHTML = "";
-          this.appendChild(iframe);
-        });
-      };
-    
-    }();
+      youtube[i].addEventListener("click", function() {
+        videoContent.addClass("hide");
 
+        var iframe = document.createElement("iframe");
+
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute(
+          "src",
+          "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=1"
+        );
+
+        this.innerHTML = "";
+        this.appendChild(iframe);
+      });
+    }
+  })();
+
+  var backgroundloadvideo = (function() {
+    var youtube = $(".youtube-background");
+
+    var id = youtube[0].dataset.embed;
+
+    var iframe = document.createElement("iframe");
+
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute(
+      "src",
+      "https://www.youtube.com/embed/" + id + "?rel=0&showinfo=0&autoplay=1&loop=1?controls=0"
+    );
+
+    youtube.innerHTML = "";
+    youtube.append(iframe);
+  })();
 });

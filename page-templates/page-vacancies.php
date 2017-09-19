@@ -87,7 +87,7 @@ get_header(); ?>
           <?php echo $offer; ?>
           </div>
         </div>
-        <p><a href="#" class="button m3-b"><?php esc_html_e( 'Apply now', '_pixformance' ); ?></a></p>
+        <p><a href="mailto:jobs@pixformance.com" class="button m3-b"><?php esc_html_e( 'Apply now', '_pixformance' ); ?></a></p>
       </div>
     </div>
 

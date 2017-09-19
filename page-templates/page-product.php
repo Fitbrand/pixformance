@@ -18,7 +18,8 @@ get_header(); ?>
   <?php get_template_part( 'template-parts/storyblock1' ); ?>
   <?php get_template_part( 'template-parts/productrow2' ); ?>
   <?php get_template_part( 'template-parts/storyblock2' ); ?>
-  </div>
+</div>
+<?php get_template_part( 'template-parts/out-of-grid' ); ?>
 </div>
 <?php
 get_sidebar();

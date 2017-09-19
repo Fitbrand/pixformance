@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-	<?php get_template_part( 'template-parts/page-header' ); ?>
+	<?php get_template_part( 'template-parts/video-header-auto' ); ?>
 
 	<?php get_template_part( 'template-parts/video-block' ); ?>
 

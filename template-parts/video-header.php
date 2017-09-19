@@ -6,7 +6,7 @@
     ?>
 
 <div class="wrapper">
-  <div class="youtube" data-embed="<?php echo $id; ?>" data-image="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" data-location="home">
+  <div class="youtube youtube-lazy" data-embed="<?php echo $id; ?>" data-image="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" data-location="home">
     <div class="play-button">
       <svg class="icon-play">
         <use xlink:href="#icon-play" xmlns:xlink="http://www.w3.org/1999/xlink"></use>

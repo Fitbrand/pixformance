@@ -17403,7 +17403,43 @@ var $ = __webpack_require__(64);
 
 __webpack_require__(62);
 
+var smoothScroll = function smoothScroll() {
+  // Select all links with hashes
+  $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]').not('[href="#0"]').click(function (event) {
+    // On-page links
+    if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $("html, body").animate({
+          scrollTop: target.offset().top
+        }, 1000, function () {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          }
+        });
+      }
+    }
+  });
+};
+
 $(document).ready(function () {
+  smoothScroll();
+
   function isElementInViewport(elem) {
     var elem = $(elem);
 
@@ -17435,14 +17471,13 @@ $(document).ready(function () {
     var elem = $("#masthead");
 
     if ($("#masthead").hasClass("no-scroll")) {} else {
-
       var scroll = $(window).scrollTop();
 
       if (scroll > 100) {
         elem.addClass("active");
         elem.removeClass("p1-tb");
       } else {
-        elem.removeClass('active');
+        elem.removeClass("active");
         elem.addClass("p1-tb");
       }
     }
@@ -17454,17 +17489,15 @@ $(document).ready(function () {
   });
 
   var lazyloadvideo = function () {
-
-    var youtube = document.querySelectorAll(".youtube");
-    var videoContent = $(".video-content-wrapper");;
+    var youtube = document.querySelectorAll(".youtube-lazy");
+    var videoContent = $(".video-content-wrapper");
 
     for (var i = 0; i < youtube.length; i++) {
-
       var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/sddefault.jpg";
       var location = youtube[i].dataset.location;
 
       var image = new Image();
-      if (location === 'home') {
+      if (location === "home") {
         image.src = youtube[i].dataset.image;
       } else {
         image.src = source;
@@ -17474,8 +17507,7 @@ $(document).ready(function () {
       }(i));
 
       youtube[i].addEventListener("click", function () {
-
-        videoContent.addClass('hide');
+        videoContent.addClass("hide");
 
         var iframe = document.createElement("iframe");
 
@@ -17486,7 +17518,22 @@ $(document).ready(function () {
         this.innerHTML = "";
         this.appendChild(iframe);
       });
-    };
+    }
+  }();
+
+  var backgroundloadvideo = function () {
+    var youtube = $(".youtube-background");
+
+    var id = youtube[0].dataset.embed;
+
+    var iframe = document.createElement("iframe");
+
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("src", "https://www.youtube.com/embed/" + id + "?rel=0&showinfo=0&autoplay=1&loop=1?controls=0");
+
+    youtube.innerHTML = "";
+    youtube.append(iframe);
   }();
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(32)))

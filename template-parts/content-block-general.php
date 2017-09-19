@@ -9,7 +9,7 @@
 
 <div class="wrapper">
 	<div class="layout p9-t m9-b p3-lr p6-t-small">
-    <div class="grid grid-halves grid-image-<?php echo $position; ?>">
+    <div class="grid grid-halves grid-gap-large grid-image-<?php echo $position; ?>">
       <div class="grid-item">
         <img class="m3-b" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
       </div>

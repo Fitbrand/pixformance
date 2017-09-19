@@ -9,43 +9,40 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
+<div class="wrapper m6-b p9-t">
+<div class="layout">
+	<?php the_archive_title( '<h1 class="f3 ttu text-center m6-b">', '</h1>' ); ?>
+	<div class="gird blog-grid clearfix">
+	<?php
+		$the_query = new WP_Query( array( 'post__not_in' => get_option( 'sticky_posts' ) ) );
+		if ( have_posts() ) :
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
+			while ( have_posts() ) : the_post(); ?>
+				<?php
+				// If a feature image is set, get the id, so it can be injected as a css background property
+				if ( has_post_thumbnail( $post->ID ) ) :
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+					$image = $image[0];
+				?>
+				<a class="m3-b block grid-item blog-grid-item no-underline" href="<?php the_permalink(); ?>">
+						<img class="cover m3-b" src="<?php echo $image; ?>" alt="">
+						<div class="p3-lr">
+						<span class="ttu m1-b block"><?php echo get_the_category()[0]->name; ?></span>
+					<h2 class="f3"><?php the_title(); ?></h2>
+					</div>
+				</a>
+				<?php endif; ?>
+			<?php endwhile; wp_reset_query();
+			
 		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
+			
 		endif; ?>
+	</div>
+	<?php the_posts_navigation(); ?>
+</div>
+</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+<?php get_template_part( 'template-parts/newsletter' ); ?>
 <?php
 get_sidebar();
 get_footer();
