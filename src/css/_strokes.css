@@ -28,6 +28,7 @@
   z-index: -5;
   height: 50px;
   border-radius: 90px;
+  transform: scale3d(1,1,1);
   
 }
 
@@ -36,7 +37,7 @@
   background-color: #C22929;
   top: 0;
   mix-blend-mode: color-burn;
-  animation: animateStroke4041 .7s ease-in;
+  animation: animateStroke4041 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
   z-index: 2;
 }
@@ -129,7 +130,7 @@
   right: -10vw;
   mix-blend-mode: hard-light;
   z-index: 6;
-    animation: animateStrokeProduct1 .7s ease-in;
+    animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -144,7 +145,7 @@
 }
 
 .stroke-product-2.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -158,7 +159,7 @@
 }
 
 .stroke-product-3.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -172,7 +173,7 @@
 }
 
 .stroke-product-4.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -186,7 +187,7 @@
 }
 
 .stroke-product-5.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -200,7 +201,7 @@
 }
 
 .stroke-product-6.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -279,7 +280,7 @@
 }
 
 .stroke-out-grid.active {
-  animation: animateStrokeGrid1 .7s ease-in;
+  animation: animateStrokeGrid1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -304,7 +305,7 @@
   bottom: 40vh;
   right: 40vw;
   mix-blend-mode: hard-light;
-  animation: animateStrokeGrid1 .7s ease-in;
+  animation: animateStrokeGrid1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
   z-index: 6;
 }
@@ -333,7 +334,7 @@
 }
 
 .stroke-contact-1.active {
-  animation: animateStrokeContact1 .7s ease-in;
+  animation: animateStrokeContact1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -363,7 +364,7 @@
 }
 
 .stroke-footer-1.active {
-  animation: animateStrokeStroke1 .7s ease-in;
+  animation: animateStrokeStroke1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -393,7 +394,7 @@
 }
 
 .stroke-video-1.active {
-  animation: animateStrokeVideo1 .7s ease-in;
+  animation: animateStrokeVideo1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -418,7 +419,7 @@
 }
 
 .stroke-story-1.active {
-  animation: animateStrokeStory1 .7s ease-in;
+  animation: animateStrokeStory1 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -443,7 +444,7 @@
 }
 
 .stroke-story-2.active {
-  animation: animateStrokeStory2 .7s ease-in;
+  animation: animateStrokeStory2 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -468,7 +469,7 @@
 }
 
 .stroke-usp-1.active {
-  animation: animateStrokeUsp .7s ease-in;
+  animation: animateStrokeUsp var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -493,7 +494,7 @@
 }
 
 .stroke-motion-1.active {
-  animation: animateStrokeMotion .7s ease-in;
+  animation: animateStrokeMotion var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -518,7 +519,7 @@
 }
 
 .stroke-where-1.active {
-  animation: animateStrokeWhere .7s ease-in;
+  animation: animateStrokeWhere var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -540,7 +541,7 @@
   mix-blend-mode: hard-light;
   z-index: 15;
   opacity: .8;
-  animation: animateStrokeVideo .7s ease-in;
+  animation: animateStrokeVideo var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -562,7 +563,7 @@
   mix-blend-mode: hard-light;
   z-index: 15;
   opacity: .8;
-  animation: animateStrokeVideo2 .7s ease-in;
+  animation: animateStrokeVideo2 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -573,5 +574,178 @@
   }
   100% {
     width: 25vw;
+  }
+}
+
+
+
+/*
+ * Story animations
+ */
+
+
+.stroke-content-1 {
+  background: #ffd900;
+  transform: rotate(-25deg);
+  bottom: 35vh;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-content-1.active {
+  animation: animateStrokeStory var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+.stroke-content-2 {
+  background: #891E82;
+  transform: rotate(-25deg);
+  bottom: 25vh;
+  right: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-content-2.active {
+  animation: animateStrokeStory2 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+
+
+.stroke-content-3 {
+  background: #ffd900;
+  transform: rotate(25deg);
+  bottom: 35vh;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-content-3.active {
+  animation: animateStrokeStory3 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory3{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+.stroke-content-4 {
+  background: #891E82;
+  transform: rotate(25deg);
+  bottom: 25vh;
+  right: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-content-4.active {
+  animation: animateStrokeStory4 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory4{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+
+
+
+/*
+ * Footer animations
+ */
+
+
+.stroke-footer-1 {
+  background: #ff0000;
+  transform: rotate(-25deg);
+  top: 35vh;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-footer-1.active {
+  animation: animateStrokeFooter1 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeFooter1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 15vw;
+  }
+}
+
+/*
+ * Icon animations
+ */
+
+
+ 
+.stroke-icon-1 {
+  background: #58b9a4;
+  transform: rotate(-25deg);
+  bottom: -5vh;
+  left: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-icon-1.active {
+  animation: animateStrokeIcon var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeIcon{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 40vw;
   }
 }

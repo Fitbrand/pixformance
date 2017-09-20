@@ -108,9 +108,10 @@
 }
 
 #masthead {
-  z-index: 15;
+  z-index: 25;
   transition: background 0.5s ease-in-out, padding 0.7s ease-in-out;
   background: color(var(--white) alpha(0%));
+  transform: scale3d(1,1,1);
 }
 
 #masthead.active {
@@ -236,6 +237,24 @@
 .active .nav-menu {
   @media (--breakpoint-mobile-only) {
     margin-top: 0.5rem;
+  }
+}
+
+
+.contact-cta {
+  @media (--breakpoint-medium) {
+  background-color: #f4d2d4;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: fixed;
+  z-index: 20;
+  right: 3rem;
+  top: 10vh;
+  transform: scale3d(1,1,1);
   }
 }
 

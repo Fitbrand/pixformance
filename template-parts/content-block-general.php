@@ -8,6 +8,13 @@
     ?>
 
 <div class="wrapper">
+  <?php if($position === 'left') : ?>
+  <div class="stroke-content-1 stroke stroke-scroll" id="stoke-content-1"></div>
+  <div class="stroke-content-2 stroke stroke-scroll" id="stoke-content-2"></div>
+  <?php else : ?>
+  <div class="stroke-content-3 stroke stroke-scroll" id="stoke-content-3"></div>
+  <div class="stroke-content-4 stroke stroke-scroll" id="stoke-content-4"></div>
+  <?php endif; ?>
 	<div class="layout p9-t m9-b p3-lr p6-t-small">
     <div class="grid grid-halves grid-gap-large grid-image-<?php echo $position; ?>">
       <div class="grid-item">

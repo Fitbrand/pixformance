@@ -57,4 +57,7 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<?php if(!is_page_template('page-templates/page-contact.php')) : ?>
+	<a class="contact-cta white no-underline hover-effect" href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><?php esc_html_e( 'Contact us', '_pixformance' ); ?> <span class="arrow-right"></span></span></a>
+				<?php endif; ?>
 	<div id="content" class="site-content">

@@ -858,3 +858,12 @@ sup {
    
    }
  }
+
+ .arrow-right {
+    text-decoration: none;
+   &:before {
+    position: relative;
+    content:'\27F6';
+    left: 5px;
+   }
+ }

@@ -1,5 +1,6 @@
 <?php if( have_rows('grid_icon_blocks') ): ?>
 <div class="wrapper">
+<div class="stroke-icon-1 stroke stroke-scroll" id="stoke-icon-1"></div>
   <div class="layout p6-t m9-b p3-lr">
     <div class="grid grid-thirds grid-gap-large m3-b">
     <?php $x = 1; while( have_rows('grid_icon_blocks') ): the_row(); 

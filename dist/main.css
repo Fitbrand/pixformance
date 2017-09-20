@@ -214,7 +214,7 @@ img {
  */
 
 .button {
-  background-color: #86c9bc;
+  background-color: #6bdbd1;
   padding: 1.1rem 1rem 1rem;
   text-decoration: none;
   color: #fff;
@@ -556,7 +556,7 @@ sup {
 }
 
 .bg-green {
-  background-color: #86c9bc;
+  background-color: #6bdbd1;
 }
 
 .bg-gray {
@@ -1367,6 +1367,16 @@ sup {
 	right: 5px;
 }
 
+.arrow-right {
+    text-decoration: none
+ }
+
+.arrow-right:before {
+	position: relative;
+	content: '\27F6';
+	left: 5px;
+}
+
 /*------------------------------------*\
   #Styles
 \*------------------------------------*/
@@ -1492,9 +1502,10 @@ sup {
   }
 
 #masthead {
-  z-index: 15;
+  z-index: 25;
   transition: background 0.5s ease-in-out, padding 0.7s ease-in-out;
   background: rgba(255, 255, 255, 0);
+  transform: scale3d(1,1,1);
 }
 
 #masthead.active {
@@ -1639,6 +1650,27 @@ sup {
 
 	.active .nav-menu {
 		margin-top: 0.5rem;
+	}
+  }
+
+.contact-cta {
+}
+
+@media (min-width: 42rem) {
+
+	.contact-cta {
+		background-color: #f4d2d4;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		display: inline-block;
+		text-align: center;
+		padding: 2rem 1rem;
+		position: fixed;
+		z-index: 20;
+		right: 3rem;
+		top: 10vh;
+		transform: scale3d(1,1,1);
 	}
   }
 
@@ -2174,6 +2206,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
   z-index: -5;
   height: 50px;
   border-radius: 90px;
+  transform: scale3d(1,1,1);
   
 }
 
@@ -2182,7 +2215,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
   background-color: #C22929;
   top: 0;
   mix-blend-mode: color-burn;
-  animation: animateStroke4041 .7s ease-in;
+  animation: animateStroke4041 .5s ease-in;
   animation-fill-mode: forwards;
   z-index: 2;
 }
@@ -2272,7 +2305,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
   right: -10vw;
   mix-blend-mode: hard-light;
   z-index: 6;
-    animation: animateStrokeProduct1 .7s ease-in;
+    animation: animateStrokeProduct1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2286,7 +2319,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-product-2.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2300,7 +2333,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-product-3.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2314,7 +2347,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-product-4.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2328,7 +2361,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-product-5.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2342,7 +2375,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-product-6.active {
-  animation: animateStrokeProduct1 .7s ease-in;
+  animation: animateStrokeProduct1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2420,7 +2453,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-out-grid.active {
-  animation: animateStrokeGrid1 .7s ease-in;
+  animation: animateStrokeGrid1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2444,7 +2477,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
   bottom: 40vh;
   right: 40vw;
   mix-blend-mode: hard-light;
-  animation: animateStrokeGrid1 .7s ease-in;
+  animation: animateStrokeGrid1 .5s ease-in;
   animation-fill-mode: forwards;
   z-index: 6;
 }
@@ -2473,7 +2506,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-contact-1.active {
-  animation: animateStrokeContact1 .7s ease-in;
+  animation: animateStrokeContact1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2501,7 +2534,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-footer-1.active {
-  animation: animateStrokeStroke1 .7s ease-in;
+  animation: animateStrokeStroke1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2530,7 +2563,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-video-1.active {
-  animation: animateStrokeVideo1 .7s ease-in;
+  animation: animateStrokeVideo1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2555,7 +2588,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-story-1.active {
-  animation: animateStrokeStory1 .7s ease-in;
+  animation: animateStrokeStory1 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2580,7 +2613,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-story-2.active {
-  animation: animateStrokeStory2 .7s ease-in;
+  animation: animateStrokeStory2 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2605,7 +2638,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-usp-1.active {
-  animation: animateStrokeUsp .7s ease-in;
+  animation: animateStrokeUsp .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2630,7 +2663,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-motion-1.active {
-  animation: animateStrokeMotion .7s ease-in;
+  animation: animateStrokeMotion .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2655,7 +2688,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
 }
 
 .stroke-where-1.active {
-  animation: animateStrokeWhere .7s ease-in;
+  animation: animateStrokeWhere .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2677,7 +2710,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
   mix-blend-mode: hard-light;
   z-index: 15;
   opacity: .8;
-  animation: animateStrokeVideo .7s ease-in;
+  animation: animateStrokeVideo .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2699,7 +2732,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
   mix-blend-mode: hard-light;
   z-index: 15;
   opacity: .8;
-  animation: animateStrokeVideo2 .7s ease-in;
+  animation: animateStrokeVideo2 .5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -2710,5 +2743,167 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0, 0, 0,
   }
   100% {
     width: 25vw;
+  }
+}
+
+/*
+ * Story animations
+ */
+
+.stroke-content-1 {
+  background: #ffd900;
+  transform: rotate(-25deg);
+  bottom: 35vh;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-content-1.active {
+  animation: animateStrokeStory .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+.stroke-content-2 {
+  background: #891E82;
+  transform: rotate(-25deg);
+  bottom: 25vh;
+  right: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-content-2.active {
+  animation: animateStrokeStory2 .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+.stroke-content-3 {
+  background: #ffd900;
+  transform: rotate(25deg);
+  bottom: 35vh;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-content-3.active {
+  animation: animateStrokeStory3 .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory3{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+.stroke-content-4 {
+  background: #891E82;
+  transform: rotate(25deg);
+  bottom: 25vh;
+  right: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-content-4.active {
+  animation: animateStrokeStory4 .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeStory4{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+/*
+ * Footer animations
+ */
+
+.stroke-footer-1 {
+  background: #ff0000;
+  transform: rotate(-25deg);
+  top: 35vh;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 15;
+  opacity: .8;
+}
+
+.stroke-footer-1.active {
+  animation: animateStrokeFooter1 .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeFooter1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 15vw;
+  }
+}
+
+/*
+ * Icon animations
+ */
+
+.stroke-icon-1 {
+  background: #58b9a4;
+  transform: rotate(-25deg);
+  bottom: -5vh;
+  left: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-icon-1.active {
+  animation: animateStrokeIcon .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeIcon{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 40vw;
   }
 }

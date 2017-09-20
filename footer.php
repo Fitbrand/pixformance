@@ -14,7 +14,8 @@
 	<?php get_template_part( 'template-parts/recent-customers' ); ?>
 	<?php get_template_part( 'template-parts/story-download' ); ?>
 	<?php get_template_part('template-parts/contact-cta');?>
-	<footer id="colophon" class="p6-t">
+	<footer id="colophon" class="p6-t relative">
+	<div class="stroke-footer-1 stroke stroke-scroll" id="stoke-footer-1"></div>
 		<div class="layout f7 p3-lr">
 		<h5 class="bold ttu"><?php bloginfo( 'name' ); ?></h5>
 			<div class="grid grid-sixes m3-b">

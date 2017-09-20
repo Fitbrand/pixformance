@@ -25,7 +25,7 @@
   --gray: #666666;
   --gray-light: #f6f9fc;
   --purple: #493b94;
-  --green: #86c9bc;
+  --green: #6bdbd1;
   --red: #f54851;
   --yellow: #ECF244;
   --yellow-light: #fdfeec;
@@ -36,6 +36,8 @@
 
 
   --f4: 1.25rem;
+
+  --stroke-speed: .5s;
 
   /*
   * Breakpoints
