@@ -6,7 +6,7 @@
       $link = $cta['link'];
     ?>
     <div class="wrapper">
-      <div class="stroke-footer-1 stroke stroke-scroll" id="footer-stroke-1"></div>
+      <div class="stroke-footer-2 stroke stroke-scroll" id="footer-stroke-2"></div>
       <div class="grid grid-halves">
         <div class="grid-item filled p9-t p9-b" style="background-image: url('<?php echo $image; ?>')">
           &nbsp;

@@ -16,6 +16,26 @@ var $ = require("jquery/src/jquery");
 
 require("./navigation");
 
+var getSystem = function () {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
+
 var smoothScroll = function() {
   // Select all links with hashes
   $('a[href*="#"]')
@@ -113,11 +133,22 @@ $(document).ready(function() {
       }
     }
   }
+  
+  function setNavigationAnimationMobile() {
+    var elem = $("#masthead");
+        elem.addClass("active");
+        elem.removeClass("p1-tb");
+
+  }
 
   // Capture scroll events
   jQuery(window).scroll(function() {
     checkNavigationAnimation();
     checkAnimation();
+  });
+
+  window.addEventListener('touchstart', function() {
+    setNavigationAnimationMobile();
   });
 
   var lazyloadvideo = (function() {
@@ -142,7 +173,12 @@ $(document).ready(function() {
       );
 
       youtube[i].addEventListener("click", function() {
-        videoContent.addClass("hide");
+               
+        if(getSystem() === 'iOS' || getSystem() === 'Android' || getSystem() === 'Windows Phone') {
+        
+        } else {
+          videoContent.addClass("hide");
+        }
 
         var iframe = document.createElement("iframe");
 
@@ -154,12 +190,16 @@ $(document).ready(function() {
         );
 
         this.innerHTML = "";
+        
         this.appendChild(iframe);
       });
     }
   })();
 
   var backgroundloadvideo = (function() {
+    if(getSystem() === 'iOS' || getSystem() === 'Android' || getSystem() === 'Windows Phone') {
+      return
+    }
     var youtube = $(".youtube-background");
     if (youtube.length !== 0) {
       var id = youtube[0].dataset.embed;
@@ -170,7 +210,7 @@ $(document).ready(function() {
       iframe.setAttribute("allowfullscreen", "");
       iframe.setAttribute(
         "src",
-        "https://www.youtube.com/embed/" + id + "?rel=0&showinfo=0&autoplay=1&loop=1?controls=0"
+        "https://www.youtube.com/embed/" + id + "?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=" + id
       );
 
       youtube.innerHTML = "";

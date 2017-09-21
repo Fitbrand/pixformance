@@ -8,7 +8,9 @@
 
 
 <div class="wrapper filled bg-hide-small" style="background-image: url('<?php echo wp_get_attachment_image_src( $image, $size )[0] ?>')">
-		<div class="layout">
+<div class="stroke stroke-about-1 stroke-scroll" id="stroke-about-1"></div>   
+<div class="stroke stroke-about-2 stroke-scroll" id="stroke-about-2"></div>   
+<div class="layout">
 			<div class="grid grid-halves">
 				<div class="grid-item bg-show-small h-item-1 filled" style="background-image: url('<?php echo wp_get_attachment_image_src( $image, $size )[0] ?>')">&nbsp;</div>
 				<div class="grid-item p9-t m9-b">

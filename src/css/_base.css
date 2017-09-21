@@ -75,6 +75,11 @@ img {
  * Button
  */
 
+input:not([type="radio"]):not([type="checkbox"]) {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 .button {
   background-color: var(--green);
   padding: 1.1rem 1rem 1rem;
@@ -137,7 +142,7 @@ img {
 
 .youtube {
   background-color: #000;
-  margin-bottom: 30px;
+
   position: relative;
   padding-top: 56.25%;
   overflow: hidden;

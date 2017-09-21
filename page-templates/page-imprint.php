@@ -43,6 +43,9 @@ get_header(); ?>
 <?php endif; ?>
 
 <div class="wrapper bg-gray-light clearfix">
+  <div class="stroke-imprint-1 stroke stroke-scroll" id="imprint-stroke-1"></div>
+  <div class="stroke-imprint-2 stroke stroke-scroll" id="imprint-stroke-2"></div>
+  <div class="stroke-imprint-3 stroke stroke-scroll" id="imprint-stroke-3"></div>
   <div class="layout  m9-b p3-lr">
     <div class="grid grid-1-3">
       <div class="grid-item">&nbsp;</div>

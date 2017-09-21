@@ -9,7 +9,7 @@
 .f-headline {
   font-size: 2rem;
   @media (--breakpoint-medium) {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -423,7 +423,7 @@ sup {
 }
 
 .grid-thirds.grid-gap-large {
-  @media (--breakpoint-small) {
+  @media (--breakpoint-medium) {
     /* Fallback */
     & > .grid-item {
       margin-right: 3rem;
@@ -516,7 +516,7 @@ sup {
 }
 
 .grid-thirds {
-  @media (--breakpoint-small) {
+  @media (--breakpoint-medium) {
     grid-template-columns: 1fr 1fr 1fr;
     display: grid;
 
@@ -645,6 +645,10 @@ sup {
   width: 100%;
 }
 
+.w-half-small {
+  max-width: calc(var(--site-width) / 2 - 6);
+}
+
 .w-half {
   max-width: calc(var(--site-width) / 2);
 }
@@ -686,7 +690,10 @@ sup {
 
 .h-item-2 {
   height: 100vh;
+   max-height: 400px;
+  @media (--breakpoint-medium) {
   max-height: 700px;
+  }
 }
 
 .h-100 {
@@ -855,7 +862,6 @@ sup {
     position: relative;
     content:'\27F6';
     right: 5px;
-   
    }
  }
 

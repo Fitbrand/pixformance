@@ -19,7 +19,10 @@ get_header(); ?>
     ?>
     
   <div class="wrapper h-item-2 filled" style="background-image: url(<?php echo $image; ?>)">
-    <div class="layout">
+  <div class="stroke-pageheader-1 stroke"></div>  
+  <div class="stroke-pageheader-2 stroke"></div>  
+
+  <div class="layout">
       &nbsp;
     </div>
   </div>
@@ -40,6 +43,7 @@ get_header(); ?>
   </div>
 
   <div class="wrapper bg-gray-medium clearfix">
+  <div class="stroke stroke-contact-3 stroke-scroll" id="stroke-contact-3"></div>  
     <div class="layout p3-lr p6-t">
       <div class="w-half">
       <?php if(get_field('contact')): 

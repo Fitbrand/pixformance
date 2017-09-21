@@ -29,7 +29,6 @@
   height: 50px;
   border-radius: 90px;
   transform: scale3d(1,1,1);
-  
 }
 
 .stroke-404-1 {
@@ -294,6 +293,54 @@
   }
 }
 
+.stroke-out-grid-2 {
+  background: #4f6fae;
+  transform: rotate(-15deg);
+  bottom: 10vh;
+  right: 40vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-out-grid-2.active {
+  animation: animateStrokeGrid2 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeGrid2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+.stroke-out-grid-3 {
+  background: #F280BF;
+  transform: rotate(35deg);
+  top: 20vh;
+  right: 5vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+}
+
+.stroke-out-grid-3.active {
+  animation: animateStrokeGrid3 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeGrid3 {
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 15vw;
+  }
+}
+
 
 /*
  * Where animations
@@ -354,7 +401,7 @@
  * Contact animations
  */
 
-.stroke-footer-1 {
+.stroke-footer-2 {
   background: #891E82;
   transform: rotate(-25deg);
   top: 25vh;
@@ -363,12 +410,12 @@
   z-index: 6;
 }
 
-.stroke-footer-1.active {
-  animation: animateStrokeStroke1 var(--stroke-speed) ease-in;
+.stroke-footer-2.active {
+  animation: animateStrokeStroke2 var(--stroke-speed) ease-in;
   animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes animateStrokeStroke1{
+@-webkit-keyframes animateStrokeStroke2{
   0% {
     width: 0;
    
@@ -460,8 +507,8 @@
 
 .stroke-usp-1 {
   background: #58b9a4;
-  transform: rotate(-45deg);
-  top: 80vh;
+  transform: rotate(-25deg);
+  bottom: 10vh;
   left: -25vw;
   mix-blend-mode: hard-light;
   z-index: 0;
@@ -480,6 +527,31 @@
   }
   100% {
     width: 45vw;
+  }
+}
+
+.stroke-usp-2 {
+  background: #ffd900;
+  transform: rotate(15deg);
+  top: 20vh;
+  right: 5vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-usp-2.active {
+  animation: animateStrokeUsp2 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeUsp2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 15vw;
   }
 }
 
@@ -657,7 +729,7 @@
    
   }
   100% {
-    width: 30vw;
+    width: 20vw;
   }
 }
 
@@ -696,8 +768,8 @@
 
 .stroke-footer-1 {
   background: #ff0000;
-  transform: rotate(-25deg);
-  top: 35vh;
+  transform: rotate(25deg);
+  top: 15vh;
   left: -5vw;
   mix-blend-mode: hard-light;
   z-index: 15;
@@ -747,5 +819,299 @@
   }
   100% {
     width: 40vw;
+  }
+}
+
+
+/*
+ * Product animations
+ */
+
+.stroke-pageheader-1 {
+  background: #58B9A4;
+  transform: rotate(25deg);
+  bottom: 20vw;
+  right: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+  width: 50vw;
+}
+
+.stroke-pageheader-2 {
+  background: #ffd900;
+  transform: rotate(-25deg);
+  bottom: 5vw;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+  width: 50vw;
+}
+
+/*
+ * About us animations
+ */
+
+.stroke-pageheader-3 {
+  background: #58B9A4;
+  transform: rotate(25deg);
+  top: 40vh;
+  left: -5vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+  width: 30vw;
+}
+
+.stroke-pageheader-4 {
+  background: #4f6fae;
+  transform: rotate(-35deg);
+  bottom: 30vh;
+  right: 5vw;
+  mix-blend-mode: hard-light;
+  z-index: 6;
+  animation: animateStrokeProduct1 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+  width: 20vw;
+}
+
+ 
+.stroke-about-1 {
+  background: #58b9a4;
+  transform: rotate(-35deg);
+  bottom: -5vh;
+  left: -10vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-about-1.active {
+  animation: animateStrokeAbout var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeAbout{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 40vw;
+  }
+}
+
+.stroke-about-2 {
+  background: #ffd900;
+  transform: rotate(-55deg);
+  top: -5vh;
+  left: -2vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-about-2.active {
+  animation: animateStrokeAbout2 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeAbout2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 40vw;
+  }
+}
+
+
+/*
+ * Contact animations
+ */
+
+
+ .stroke-contact-3 {
+  background: #891E82;
+  transform: rotate(-35deg);
+  top: -5vh;
+  right: -2vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-contact-3.active {
+  animation: animateStrokeContact3 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeContact3{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 40vw;
+  }
+}
+
+
+/*
+*
+*/
+
+.stroke-vacancies-1 {
+  background: #2781E2;
+  transform: rotate(-25deg);
+  top: 15vh;
+  right: -25vw;
+  mix-blend-mode: hard-light;
+  z-index: 8;
+  opacity: .8;
+  animation: animateStrokeVacanies var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeVacanies{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 60vw;
+  }
+}
+
+
+ .stroke-vacancies-2 {
+  background: #891E82;
+  transform: rotate(15deg);
+  top: 30vh;
+  left: -12vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-vacancies-2.active {
+  animation: animateStrokeVacancies2 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeVacancies2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 40vw;
+  }
+}
+
+ .stroke-vacancies-3 {
+  background: #ffd900;
+  transform: rotate(25deg);
+  top: 40vh;
+  right: -12vw;
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  opacity: .8;
+}
+
+.stroke-vacancies-3.active {
+  animation: animateStrokeVacancies3 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeVacancies3{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 30vw;
+  }
+}
+
+
+.stroke-imprint-1 {
+  background: #ff0000;
+  transform: rotate(45deg);
+  top: 15vh;
+  left: 12vw;
+  mix-blend-mode: hard-light;
+  z-index: 5;
+  opacity: .8;
+}
+
+.stroke-imprint-1.active {
+  animation: animateStrokeImprint1 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeImprint1{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+.stroke-imprint-2 {
+  background: #2781E2;
+  transform: rotate(-25deg);
+  top: 23vh;
+  left: 18vw;
+  mix-blend-mode: hard-light;
+  z-index: 5;
+  opacity: .8;
+}
+
+.stroke-imprint-2.active {
+  animation: animateStrokeImprint2 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeImprint2{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 15vw;
+  }
+}
+
+
+.stroke-imprint-3 {
+  background: #891E82;
+  transform: rotate(-25deg);
+  top: 100vh;
+  left: 18vw;
+  mix-blend-mode: hard-light;
+  z-index: 5;
+  opacity: .8;
+}
+
+.stroke-imprint-3.active {
+  animation: animateStrokeImprint3 var(--stroke-speed) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animateStrokeImprint3{
+  0% {
+    width: 0;
+   
+  }
+  100% {
+    width: 15vw;
   }
 }

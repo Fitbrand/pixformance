@@ -72,7 +72,6 @@
 .out-grid-content {
   @media (--breakpoint-medium) {
     grid-column: main-half1;
-
   }
 }
 .out-grid-right {
@@ -80,6 +79,21 @@
     grid-column: main-half2 / full-end;
   }
 }
+
+.wrapper-grid-reversed .out-grid-content {
+  @media (--breakpoint-medium) {
+    grid-column: main-half2;
+  }
+}
+
+
+.wrapper-grid-reversed .out-grid-right {
+  @media (--breakpoint-medium) {
+    grid-column: full-start / main-half2;
+  }
+}
+
+
 
 .layout {
   max-width: var(--site-width);
@@ -242,6 +256,7 @@
 
 
 .contact-cta {
+  display: none;
   @media (--breakpoint-medium) {
   background-color: #f4d2d4;
   height: 100px;
@@ -391,23 +406,25 @@
  */
 
 .usps {
-  @media (--breakpoint-small) {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-
-    /* Fallback */
-    & > .grid-item:nth-child(1) {
-      width: 25%;
-    }
-    & > .grid-item:nth-child(2) {
-      width: 50%;
-    }
-    & > .grid-item:nth-child(3) {
-      width: 25%;
-    }
-    /* End fallback */
-
+  @media (--breakpoint-medium) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
+}
+
+.usp-row {
+    @media (--breakpoint-medium) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.usp-row-item {
+   @media (--breakpoint-medium) {
+     max-width: 400px;
+   }
 }
 
 .stories {
@@ -485,6 +502,18 @@ input[type="submit"] {
   }
 }
 
+
+.form-field-naked-white {
+
+  & input {
+    border-bottom: 2px solid var(--white);
+  }
+   & input::placeholder {
+     color: var(--white)
+   }
+}
+
+
 .story-featured-image {
   max-width: 120px;
   height: auto;
@@ -520,7 +549,7 @@ input[type="submit"] {
     top: 0;
     left: 0;
     overflow: hidden;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
   }
 }
@@ -679,4 +708,38 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); 
 background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+.header-read-more {
+  display: none;
+  @media (--breakpoint-small) {
+  position: absolute;
+  top: 85vh;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  display: block;
+
+   &:after {
+    position: relative;
+    content:'\2193';
+    right: 27px;
+    bottom: -20px;
+   }
+  }
+
+  @media (--breakpoint-medium) {
+      top: 92vh;
+  }
+}
+
+.newsletter {
+  @media (--breakpoint-medium) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
