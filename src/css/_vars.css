@@ -45,6 +45,6 @@
 
   @custom-media --breakpoint-large (min-width: 102rem);
   @custom-media --breakpoint-small (min-width: 26rem);
-  @custom-media --breakpoint-medium (min-width: 42rem);
-  @custom-media --breakpoint-mobile-only (max-width: 42rem);
+  @custom-media --breakpoint-medium (min-width: 59rem);
+  @custom-media --breakpoint-mobile-only (max-width: 59rem);
 }

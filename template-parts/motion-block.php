@@ -14,7 +14,7 @@
       <div class="w-full"><?php echo $content; ?></div>
     </div>
     </div>
-    <div class="grid-item p1-lr p6-t">
+    <div class="grid-item p1-lr p6-t text-center">
     <img class="workout-mockup" src="<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>" />
     </div>
   </div>
