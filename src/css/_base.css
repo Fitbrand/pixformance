@@ -47,6 +47,9 @@ p {
   margin: 0 0 1rem; //font-size: 1.25rem;
 }
 
+li {
+  line-height: 1.66em;
+}
 
 /*
  * Links

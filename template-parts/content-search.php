@@ -9,22 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="m6-b" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php _pixformance_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php the_title( sprintf( '<h2 class="f3 m1-b"><a class="no-underline" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
+	<div class="entry-summary m1-b">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php _pixformance_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'View page', '_pixformance' ); ?></a>
 </article><!-- #post-<?php the_ID(); ?> -->

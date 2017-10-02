@@ -16,25 +16,25 @@ var $ = require("jquery/src/jquery");
 
 require("./navigation");
 
-var getSystem = function () {
+var getSystem = function() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      // Windows Phone must come first because its UA also contains "Android"
-    if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
-    }
+  // Windows Phone must come first because its UA also contains "Android"
+  if (/windows phone/i.test(userAgent)) {
+    return "Windows Phone";
+  }
 
-    if (/android/i.test(userAgent)) {
-        return "Android";
-    }
+  if (/android/i.test(userAgent)) {
+    return "Android";
+  }
 
-    // iOS detection from: http://stackoverflow.com/a/9039885/177710
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return "iOS";
-    }
+  // iOS detection from: http://stackoverflow.com/a/9039885/177710
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    return "iOS";
+  }
 
-    return "unknown";
-}
+  return "unknown";
+};
 
 var smoothScroll = function() {
   // Select all links with hashes
@@ -82,19 +82,22 @@ var smoothScroll = function() {
 $(document).ready(function() {
   smoothScroll();
 
+  $("#search-toggle").click(function() {
+    $(".menu-search-wrapper").toggleClass("active");
+  });
+
+  $("#close-search").click(function() {
+    $(".menu-search-wrapper").toggleClass("active");
+  });
+
   function isElementInViewport(elem) {
-    var elem = $(elem);
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
 
-    // Get the scroll position of the page.
-    var scrollElem = navigator.userAgent.toLowerCase().indexOf("webkit") != -1 ? "body" : "html";
-    var viewportTop = $(scrollElem).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
 
-    // Get the position of the element on the page.
-    var elemTop = Math.round(elem.offset().top);
-    var elemBottom = elemTop + elem.height();
-
-    return elemTop < viewportBottom && elemBottom > viewportTop;
+    return elemBottom <= docViewBottom && elemTop >= docViewTop;
   }
 
   // Check if it's time to start the animation.
@@ -105,17 +108,29 @@ $(document).ready(function() {
     //if (elem.hasClass("active")) return;
 
     elem.each(function(i, obj) {
+      console.log("i", i);
+      console.log("obj", obj);
       if (isElementInViewport(obj)) {
         var element = $(obj);
+        console.log("element", element);
         // Start the animation
         if (element.length !== 0) {
-          var id = element.attr('id');
-          $('#' + id).addClass("active");
+          var id = element.attr("id");
+          $("#" + id).addClass("active");
         }
       }
     });
-
   }
+
+  function mobileNavigation() {
+    if ($(window).width() < 800) {
+      var elem = $("#masthead");
+      elem.addClass("active");
+      elem.removeClass("p1-tb");
+    }
+  }
+
+  mobileNavigation();
 
   function checkNavigationAnimation() {
     var elem = $("#masthead");
@@ -133,12 +148,11 @@ $(document).ready(function() {
       }
     }
   }
-  
+
   function setNavigationAnimationMobile() {
     var elem = $("#masthead");
-        elem.addClass("active");
-        elem.removeClass("p1-tb");
-
+    elem.addClass("active");
+    elem.removeClass("p1-tb");
   }
 
   // Capture scroll events
@@ -147,7 +161,7 @@ $(document).ready(function() {
     checkAnimation();
   });
 
-  window.addEventListener('touchstart', function() {
+  window.addEventListener("touchstart", function() {
     setNavigationAnimationMobile();
   });
 
@@ -173,9 +187,7 @@ $(document).ready(function() {
       );
 
       youtube[i].addEventListener("click", function() {
-               
-        if(getSystem() === 'iOS' || getSystem() === 'Android' || getSystem() === 'Windows Phone') {
-        
+        if (getSystem() === "iOS" || getSystem() === "Android" || getSystem() === "Windows Phone") {
         } else {
           videoContent.addClass("hide");
         }
@@ -190,15 +202,15 @@ $(document).ready(function() {
         );
 
         this.innerHTML = "";
-        
+
         this.appendChild(iframe);
       });
     }
   })();
 
   var backgroundloadvideo = (function() {
-    if(getSystem() === 'iOS' || getSystem() === 'Android' || getSystem() === 'Windows Phone') {
-      return
+    if (getSystem() === "iOS" || getSystem() === "Android" || getSystem() === "Windows Phone") {
+      return;
     }
     var youtube = $(".youtube-background");
     if (youtube.length !== 0) {

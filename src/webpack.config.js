@@ -1,8 +1,8 @@
 var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack = require("webpack");
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+var BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+var CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -27,10 +27,11 @@ module.exports = {
           fallback: "style-loader",
           use: "css-loader?importLoaders=1!postcss-loader"
         })
-      }, {
+      },
+      {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         use: {
-          loader: 'file-loader?name=fonts/[name].[ext]'
+          loader: "file-loader?name=fonts/[name].[ext]"
         }
       }
     ]
@@ -47,10 +48,7 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin("main.css"),
-    new CopyWebpackPlugin([
-      { from: 'favicon/**/*', to: '../dist' },
-      { from: 'images/**/*', to: '../dist' },
-    ]),
+    new CopyWebpackPlugin([{ from: "favicon/**/*", to: "../dist" }, { from: "images/**/*", to: "../dist" }]),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
@@ -60,8 +58,15 @@ module.exports = {
       // ./public directory is being served
       host: "localhost",
       port: 3000,
-      files: ['../dist/main.css', '../dist/app.bundle.js', '../*.php', '../template-parts/*.php', '../page-templates/*.php', '../inc/*.php'],
-      proxy: 'http://www.pixformance.dev/',
+      files: [
+        "../dist/main.css",
+        "../dist/app.bundle.js",
+        "../*.php",
+        "../template-parts/*.php",
+        "../page-templates/*.php",
+        "../inc/*.php"
+      ],
+      proxy: "https://www.pixformance.dev/",
       notify: false
     })
   ],

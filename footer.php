@@ -19,22 +19,20 @@
 		<div class="layout f7 p3-lr">
 		<h5 class="bold ttu"><?php bloginfo( 'name' ); ?></h5>
 			<div class="grid grid-sixes m3-b">
+			<?php $block = get_field('footer', 'options'); ?>
+			<?php $column1 = $block['column_1']; 
+						$column2 = $block['column_2'];
+						$column3 = $block['column_3'];
+					?>
+				
 				<div class="grid-item">
-					<p>
-						Principal Office<br> Hauptstr. 19-20<br> D- Dallgow-Döberitz
-					</p>
+					<?php echo $column1; ?>
 				</div>
 				<div class="grid-item">
-					<p>
-						Development Office <br> Helmholtzstraße 2-9 <br> GSG Hof/Aufgang H <br> D-10587 Berlin
-					</p>
+					<?php echo $column2; ?>
 				</div>
 				<div class="grid-item m3-b">
-					<p>
-						<strong class="label-spacer">T</strong>+49 (0)30 39 80 56 10 <br>
-						<strong class="label-spacer">F</strong>+49 (0)30 39 80 56 129 <br>
-						<strong class="label-spacer">M</strong>contact@pixformance.com
-					</p>
+					<?php echo $column3; ?>
 				</div>
 				<div class="grid-item m3-b">
 				<?php
@@ -62,6 +60,24 @@
 
 	<?php get_template_part('template-parts/footer-cta');?>
 </div>
+
 <?php wp_footer(); ?>
+
 </body>
 </html>
+<div class="pix">
+<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 836917840;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	</script>
+	<noscript>
+		<div style="display:inline;">
+			<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/836917840/?guid=ON&amp;script=0"/>
+		</div>
+	</noscript>
+</div>

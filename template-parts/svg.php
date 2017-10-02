@@ -30,4 +30,23 @@
 </symbol>
 </svg>
 
+<svg display="none" xmlns="http://www.w3.org/2000/svg">
+<symbol id="icon-search" viewBox="0 0 17.02 17.07" >
+<g data-name="Layer 2">
+<path d="M6.44 13a6.41 6.41 0 0 1-4.56-1.9A6.52 6.52 0 0 1 6.5 0a6.41 6.41 0 0 1 4.57 1.9A6.52 6.52 0 0 1 6.46 13zM10.2 2.79a5.17 5.17 0 0 0-3.68-1.54 5.27 5.27 0 0 0-3.74 9 5.17 5.17 0 0 0 3.68 1.54 5.27 5.27 0 0 0 3.74-9z"/>
+<path d="M10.276 11.168l.887-.881 5.857 5.896-.887.88z"/>
+</g>
+</symbol>
+</svg>
+
+
 <!-- Later in the code, use it... -->
+
+<svg display="none" xmlns="http://www.w3.org/2000/svg">
+ <symbol id="icon-close" viewBox="0 0 16.6 16.6" >
+ <g data-name="Layer 2">
+ <path d="M.004.882L.887 0l15.72 15.719-.884.883z"/>
+ <path d="M.004 15.718L15.723-.002l.883.884L.887 16.602z"/>
+ </g>
+ </symbol>
+</svg>

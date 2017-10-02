@@ -17460,19 +17460,22 @@ var smoothScroll = function smoothScroll() {
 $(document).ready(function () {
   smoothScroll();
 
+  $("#search-toggle").click(function () {
+    $(".menu-search-wrapper").toggleClass("active");
+  });
+
+  $("#close-search").click(function () {
+    $(".menu-search-wrapper").toggleClass("active");
+  });
+
   function isElementInViewport(elem) {
-    var elem = $(elem);
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
 
-    // Get the scroll position of the page.
-    var scrollElem = navigator.userAgent.toLowerCase().indexOf("webkit") != -1 ? "body" : "html";
-    var viewportTop = $(scrollElem).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
 
-    // Get the position of the element on the page.
-    var elemTop = Math.round(elem.offset().top);
-    var elemBottom = elemTop + elem.height();
-
-    return elemTop < viewportBottom && elemBottom > viewportTop;
+    return elemBottom <= docViewBottom && elemTop >= docViewTop;
   }
 
   // Check if it's time to start the animation.
@@ -17483,16 +17486,29 @@ $(document).ready(function () {
     //if (elem.hasClass("active")) return;
 
     elem.each(function (i, obj) {
+      console.log("i", i);
+      console.log("obj", obj);
       if (isElementInViewport(obj)) {
         var element = $(obj);
+        console.log("element", element);
         // Start the animation
         if (element.length !== 0) {
-          var id = element.attr('id');
-          $('#' + id).addClass("active");
+          var id = element.attr("id");
+          $("#" + id).addClass("active");
         }
       }
     });
   }
+
+  function mobileNavigation() {
+    if ($(window).width() < 800) {
+      var elem = $("#masthead");
+      elem.addClass("active");
+      elem.removeClass("p1-tb");
+    }
+  }
+
+  mobileNavigation();
 
   function checkNavigationAnimation() {
     var elem = $("#masthead");
@@ -17522,7 +17538,7 @@ $(document).ready(function () {
     checkAnimation();
   });
 
-  window.addEventListener('touchstart', function () {
+  window.addEventListener("touchstart", function () {
     setNavigationAnimationMobile();
   });
 
@@ -17545,8 +17561,7 @@ $(document).ready(function () {
       }(i));
 
       youtube[i].addEventListener("click", function () {
-
-        if (getSystem() === 'iOS' || getSystem() === 'Android' || getSystem() === 'Windows Phone') {} else {
+        if (getSystem() === "iOS" || getSystem() === "Android" || getSystem() === "Windows Phone") {} else {
           videoContent.addClass("hide");
         }
 
@@ -17564,7 +17579,7 @@ $(document).ready(function () {
   }();
 
   var backgroundloadvideo = function () {
-    if (getSystem() === 'iOS' || getSystem() === 'Android' || getSystem() === 'Windows Phone') {
+    if (getSystem() === "iOS" || getSystem() === "Android" || getSystem() === "Windows Phone") {
       return;
     }
     var youtube = $(".youtube-background");

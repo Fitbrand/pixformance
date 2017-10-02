@@ -515,6 +515,15 @@ sup {
   }
 }
 
+.grid-halves-reversed {
+  & .grid-item:nth-child(1) {
+    order: 2;
+  }
+  & .grid-item:nth-child(2) {
+    order: 1;
+  }
+}
+
 .grid-thirds {
   @media (--breakpoint-medium) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -872,4 +881,11 @@ sup {
     content:'\27F6';
     left: 5px;
    }
+ }
+
+ .naked {
+   border: 0;
+   background: none;
+   box-shadow: none;
+   outline: 0;
  }

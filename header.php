@@ -13,6 +13,13 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70930467-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments)};
+		gtag('js', new Date());
+		gtag('config', 'UA-70930467-1');
+	</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -39,6 +46,8 @@
 			</a>
 		</div>
 
+		<div class="nav-wrap">
+
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 			<div id="nav-icon">
@@ -55,6 +64,19 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+				<button id="search-toggle" class="menu-search naked">
+				<svg class="icon-search">
+					<use xlink:href="#icon-search" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+				</svg>
+				</button>
+		<div class="menu-search-wrapper p1-tb">
+			<?php get_search_form(); ?>
+			<button id="close-search" class="naked"><svg class="icon-close">
+				<use xlink:href="#icon-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+				</svg>
+			</button>
+		</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<?php if(!is_page_template('page-templates/page-contact.php')) : ?>

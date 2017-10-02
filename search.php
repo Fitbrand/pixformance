@@ -9,14 +9,29 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<?php
+    // If a feature image is set, get the id, so it can be injected as a css background property
 
+      $image = get_template_directory_uri() . '/dist/images/search-header.jpg'
+    ?>
+    
+  <div class="wrapper h-item-2 filled" style="background-image: url(<?php echo $image; ?>)">
+    <div class="layout">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+	<div class="wrapper p9-t ">
+	<div class="layout p3-lr">
+		<div class="w-half">
+			<div class="m6-b">
 		<?php
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php
+				<h1 class="f2 m3-b"><?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', '_pixformance' ), '<span>' . get_search_query() . '</span>' );
 				?></h1>
@@ -42,10 +57,11 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
+    </div>
+		
+	 </div>
+ </div>
+ </div>
 <?php
 get_sidebar();
 get_footer();
