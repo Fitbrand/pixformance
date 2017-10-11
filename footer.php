@@ -14,6 +14,7 @@
 	<?php get_template_part( 'template-parts/recent-customers' ); ?>
 	<?php get_template_part( 'template-parts/story-download' ); ?>
 	<?php get_template_part('template-parts/contact-cta');?>
+	<?php get_template_part('template-parts/footer-cta');?>
 	<footer id="colophon" class="p6-t relative">
 	<div class="stroke-footer-1 stroke stroke-scroll" id="stoke-footer-1"></div>
 		<div class="layout f7 p3-lr">
@@ -34,7 +35,7 @@
 				<div class="grid-item m3-b">
 					<?php echo $column3; ?>
 				</div>
-				<div class="grid-item m3-b">
+				<div class="grid-item m3-b footer-menu-block">
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-2',
@@ -51,14 +52,14 @@
 				?>
 				</div>
 				<div class="grid-item relative">
-					<a href="#page" class="back-top ttu">Back to top</a>
+					<a href="#page" class="back-top ttu"><?php esc_html_e( 'Back to top', '_pixformance' ); ?></a>
 				</div>
 			</div>
 			<p class="m2-b">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> - <?php esc_html_e( 'all rights reserved', '_pixformance' ); ?></p>
 		</div>
 	</footer>
 
-	<?php get_template_part('template-parts/footer-cta');?>
+
 </div>
 
 <?php wp_footer(); ?>

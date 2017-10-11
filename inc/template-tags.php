@@ -42,11 +42,20 @@ if ( ! function_exists( '_pixformance_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', '_pixformance' ) );
+			$categories_list = get_the_category_list( esc_html__( ' ', '_pixformance' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links"><strong>'. esc_html__( 'Category', '_pixformance' ) .'</strong><br />' . esc_html__( '%1$s', '_pixformance' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<div class="cat-links blog-links m1-b"><strong>'. esc_html__( 'Category', '_pixformance' ) .'</strong><br />' . esc_html__( '%1$s', '_pixformance' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 			}
+
+			// /* translators: used between list items, there is a space after the comma */
+			// $tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', '_s' ) );
+			// if ( $tags_list ) {
+			// 	/* translators: 1: list of tags. */
+
+			// 	printf( '<div class="tags-links blog-links"><strong>'. esc_html__( 'Tags', '_pixformance' ) .'</strong><br />' . esc_html__( '%1$s', '_pixformance' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+				
+			// }
 
 
 		}

@@ -23,7 +23,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
 	<?php wp_head(); ?>
 	<?php get_template_part('template-parts/favicon');?>
 </head>
@@ -31,13 +31,11 @@
 <body <?php body_class(); ?>>
 <?php get_template_part('template-parts/svg');?>
 <div id="page" class="site">
+
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_pixformance' ); ?></a>
 
-	<?php if(is_page_template('page-templates/page-imprint.php') || is_404()) : ?>
-		<header id="masthead" class="fixed flex-spaced p3-lr active no-scroll">
-	<?php else : ?>
-		<header id="masthead" class="fixed flex-spaced p3-lr p1-tb">
-	<?php endif; ?>
+
+	<header id="masthead" class="site-header flex-spaced p3-lr p1-tb">
 		<div class="site-branding">
 			<a class="block" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<svg class="logo">
@@ -77,9 +75,24 @@
 			</button>
 		</div>
 		</div>
-	</header><!-- #masthead -->
+	</header><!-- #masthead -->   
 
 	<?php if(!is_page_template('page-templates/page-contact.php')) : ?>
-	<a class="contact-cta white no-underline hover-effect" href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><?php esc_html_e( 'Contact us', '_pixformance' ); ?> <span class="arrow-right"></span></span></a>
+    
+    <?php
+       global $sitepress;
+       
+       $current_language = $sitepress->get_current_language();
+       
+       if ($current_language == 'de') {
+           $style = 'contact-cta-de';
+       } else {
+           $style = '';    
+       }
+    ?>                                        
+    
+	<a class="contact-cta white no-underline hover-effect <?php echo $style; ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><?php esc_html_e( 'Contact us', '_pixformance' ); ?> <span class="arrow-right"></span></span></a>
+    
+    
 				<?php endif; ?>
 	<div id="content" class="site-content">

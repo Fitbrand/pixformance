@@ -22,7 +22,7 @@
     </div>
   
     <footer class="text-center">
-      <a href="<?php echo $link; ?>" class="button ttu">Download case study</a>
+      <a href="<?php echo $link; ?>" class="button ttu"><?php _e('Download case study', '_pixformance'); ?></a>
     </footer>
   </div>
 </div>

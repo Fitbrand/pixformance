@@ -9,6 +9,11 @@
   outline: none;
 }
 
+html {
+    -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body,
 html {
   margin: 0;
@@ -19,6 +24,8 @@ body {
   font-family: var(--font-family);
   font-size: 16px;
   color: var(--black);
+   -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -43,13 +50,33 @@ h5 {
  */
 
 p {
-  line-height: 1.66em;
+  line-height: 1.86em;
   margin: 0 0 1rem; //font-size: 1.25rem;
 }
 
 li {
   line-height: 1.66em;
 }
+
+blockquote {
+  color: var(--green);
+  font-style: italic;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0 2rem;
+
+  @media (--breakpoint-medium) {
+    padding: 0 4rem;
+     margin: 2rem;
+     font-size: 1.6rem;
+  }
+
+  & p {
+    line-height: 1.6;
+  }
+
+}
+
 
 /*
  * Links
@@ -85,7 +112,7 @@ input:not([type="radio"]):not([type="checkbox"]) {
 
 .button {
   background-color: var(--green);
-  padding: 1.1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem;
   text-decoration: none;
   color: var(--white);
   white-space: nowrap;

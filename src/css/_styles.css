@@ -95,6 +95,7 @@
 
 
 
+
 .layout {
   max-width: var(--site-width);
   margin-left: auto;
@@ -121,19 +122,28 @@
   }
 }
 
-#masthead {
+
+.site-content {
+  padding-top: 67px;
+  @media (--breakpoint-medium) {
+  padding-top: 90px;
+  }
+}
+
+.site-header {
+  background: color(var(--white) alpha(100%));
   z-index: 25;
   transition: background 0.5s ease-in-out, padding 0.7s ease-in-out;
-  background: color(var(--white) alpha(0%));
   transform: scale3d(1,1,1);
+  position: fixed;
+  width: 100%;
+  max-height: 90px;
 }
 
-#masthead.active {
-  background: color(var(--white) alpha(100%));
+.site-header.active {
   transition: background 0.5s ease-in-out, padding 0.7s ease-in-out;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
-
-
 
 .main-navigation {
   & ul {
@@ -143,7 +153,7 @@
     color: var(--black);
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.85rem;
     padding: 0rem;
     display: inline-block;
@@ -255,6 +265,8 @@
       padding: 2rem 1rem 1rem;
       box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
       transition: margin 0.7s ease-in-out;
+      height: calc(100vh - 39px);
+      overflow-y: scroll;
     }
 
     & li {
@@ -288,7 +300,7 @@
   position: fixed;
   z-index: 20;
   right: 3rem;
-  top: 10vh;
+  top: 15vh;
   transform: scale3d(1,1,1);
   }
 }
@@ -385,7 +397,7 @@
   top: 2rem;
   }
 }
-.menu-footer-menu-container {
+.footer-menu-block > div {
   @media (--breakpoint-medium) {
     display: flex;
     justify-content: flex-end;
@@ -402,7 +414,7 @@
   }
 }
 
-.menu-social-container, .menu-footer-menu-container {
+.menu-social-container, .footer-menu-block {
   & ul {
     list-style: none;
     border-left: 1px solid var(--black);
@@ -417,6 +429,7 @@
     position: relative;
     &:after {
       position: relative;
+      font-family: 'Zapf Dingbats';
       content:'\27F6';
       left: 5px;
     }
@@ -427,35 +440,25 @@
  * Homepage
  */
 
+
 .usps {
-  @media (--breakpoint-small) {
-    display: flex;
-    justify-content: center;
-    min-height: 90vh;
-    flex-wrap: wrap;
-    align-items: flex-end;
-  }
   @media (--breakpoint-medium) {
-    display: block;
-    min-height: auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-}
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 
-.usp-row {
-    @media (--breakpoint-medium) {
-    display: flex;
-    justify-content: center;
-  }
-}
+    /* Fallback */
+    & > .grid-item:nth-child(1) {
+      width: 25%;
+    }
+    & > .grid-item:nth-child(2) {
+      width: 50%;
+    }
+    & > .grid-item:nth-child(3) {
+      width: 25%;
+    }
+    /* End fallback */
 
-.usp-row-item {
-   @media (--breakpoint-medium) {
-     max-width: 400px;
-   }
+  }
 }
 
 .stories {
@@ -600,6 +603,12 @@ input[type="submit"] {
   }
 }
 
+.blog-links {
+  & a {
+    display: block;
+    margin-bottom: .5rem;
+  }
+}
 
 .blog-grid {
   @media (--breakpoint-small) {
@@ -846,4 +855,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .menu-search {
 
+}
+
+.function-block {
+  @media (--breakpoint-mobile-only) {
+    display: flex;
+    flex-direction: column;
+  & .grid-item:nth-child(1) {
+    order: 2;
+  }
+  & .grid-item:nth-child(2) {
+    order: 1;
+  }
+  & .stroke {
+    display: none;
+  }
+  }
+}
+
+
+.contact-cta-de {
+     width: 130px;
+     height: 130px;
+     padding: 2.5rem 1rem;
 }

@@ -68,10 +68,10 @@ if ( ! function_exists( '_pixformance_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		function pixformance_unregister_tags() {
-			unregister_taxonomy_for_object_type( 'post_tag', 'post' );
-		}
-		add_action( 'init', 'pixformance_unregister_tags' );
+		// function pixformance_unregister_tags() {
+		// 	unregister_taxonomy_for_object_type( 'post_tag', 'post' );
+		// }
+		// add_action( 'init', 'pixformance_unregister_tags' );
 
 
 	}

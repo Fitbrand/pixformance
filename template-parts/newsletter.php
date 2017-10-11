@@ -6,10 +6,10 @@
       <div id="mc_embed_signup_scroll"  class="newsletter">
           <span class="f2 m3-b inline-block"><?php esc_html_e( 'Join our newsletter.', '_pixformance' ); ?></span>
           <div class="m3-b mc-field-group form-field-naked w-small form-field-naked-white">
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="<?php esc_html_e( 'Email', '_pixformance' ); ?>">
           </div>
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ccf9db1434542447338fb8c22_3cff3fbd63" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button-secondary"></div>
+        <div class="clear"><input type="submit" value="<?php esc_html_e( 'Subscribe', '_pixformance' ); ?>" name="subscribe" id="mc-embedded-subscribe" class="button button-secondary"></div>
         </div>
     </form>
 </div>

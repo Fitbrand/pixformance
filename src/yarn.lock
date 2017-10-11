@@ -2254,6 +2254,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+jssocials@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/jssocials/-/jssocials-1.5.0.tgz#7dee587e7b98b26c658889da474839a6191144c7"
+
 kind-of@^3.0.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -2285,6 +2289,10 @@ lcid@^1.0.0:
 limiter@^1.0.5:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.2.tgz#229d8055891c8b11af9e0ee5200e8e09bb3dcbeb"
+
+lity@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/lity/-/lity-2.3.0.tgz#a5920f908ce037eeb3417c690b44959ff56d7f05"
 
 load-json-file@^1.0.0:
   version "1.1.0"

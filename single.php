@@ -33,8 +33,26 @@ get_header(); ?>
 							</div>
 							<div class="grid-item p6-t">
 								<div class="m1-b"><?php _pixformance_posted_on(); ?></div>
-								<div class="m3-b"><?php _pixformance_entry_footer(); ?></div>
-								<p><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="button">Contact us</a></p>
+								<div class="m1-b"><?php _pixformance_entry_footer(); ?></div>
+								<div class="m3-b">
+									
+									<strong><?php esc_html_e( 'Share on', '_pixformance' ); ?></strong>
+									<div class="blog-links" id="share">
+									<!-- Facebook -->
+										<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
+												Facebook
+										</a>
+										<!-- Twitter -->
+										<a href="https://twitter.com/share?url=<?php the_permalink(); ?>&amp;text=Pixformance&amp;hashtags=pixformance" target="_blank">
+											Twitter
+										</a>
+										<!-- LinkedIn -->
+										<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>" target="_blank">
+												Linkedin
+										</a>
+									</div>
+								</div>
+								<p><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="button"><?php esc_html_e( 'Contact us', '_pixformance' ); ?></a></p>
 							</div>
 						</div>
 			

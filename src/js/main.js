@@ -7,6 +7,7 @@ import styles from "./../css/main.css";
 
 // OR, use all of them
 var $ = require("jquery/src/jquery");
+require("lity");
 
 // And write your code
 // $('body').append('<p>Jquery is working</p>');
@@ -82,6 +83,8 @@ var smoothScroll = function() {
 $(document).ready(function() {
   smoothScroll();
 
+
+
   $("#search-toggle").click(function() {
     $(".menu-search-wrapper").toggleClass("active");
   });
@@ -108,11 +111,8 @@ $(document).ready(function() {
     //if (elem.hasClass("active")) return;
 
     elem.each(function(i, obj) {
-      console.log("i", i);
-      console.log("obj", obj);
       if (isElementInViewport(obj)) {
         var element = $(obj);
-        console.log("element", element);
         // Start the animation
         if (element.length !== 0) {
           var id = element.attr("id");
@@ -122,15 +122,15 @@ $(document).ready(function() {
     });
   }
 
-  function mobileNavigation() {
-    if ($(window).width() < 800) {
-      var elem = $("#masthead");
-      elem.addClass("active");
-      elem.removeClass("p1-tb");
-    }
-  }
+  // function mobileNavigation() {
+  //   if ($(window).width() < 800) {
+  //     var elem = $("#masthead");
+  //     elem.addClass("active");
+  //     elem.removeClass("p1-tb");
+  //   }
+  // }
 
-  mobileNavigation();
+  // mobileNavigation();
 
   function checkNavigationAnimation() {
     var elem = $("#masthead");
@@ -140,10 +140,10 @@ $(document).ready(function() {
       var scroll = $(window).scrollTop();
 
       if (scroll > 100) {
-        elem.addClass("active");
+        elem.addClass("active fixed");
         elem.removeClass("p1-tb");
       } else {
-        elem.removeClass("active");
+        elem.removeClass("active fixed");
         elem.addClass("p1-tb");
       }
     }

@@ -18,8 +18,6 @@
   </div>
 </div>
  <div class="stroke stroke-out-grid stroke-scroll" id="outgrid-stroke-1"></div>
- 
- 
 </div>   
 
 <?php endif; ?>

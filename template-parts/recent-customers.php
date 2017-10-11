@@ -1,7 +1,7 @@
 <?php if(get_field('show_cases')) : ?>
 <div class="wrapper bg-gray white clearfix">
   <div class="layout p6-t m6-b text-center p3-lr">
-    <h4 class="f2 m6-b">Meet some of our happy customers</h4>
+    <h4 class="f2 m6-b"><?php _e("Meet some of our happy customers", "_pixformance"); ?></h4>
     <div class="grid grid-thirds">
     <?php 
 

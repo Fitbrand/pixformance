@@ -18,7 +18,7 @@ get_header(); ?>
       $image = $image[0];
     ?>
     
-  <div class="wrapper h-item-2 filled" style="background-image: url(<?php echo $image; ?>)">
+  <div class="wrapper h-medium filled" style="background-image: url(<?php echo $image; ?>)">
   <div class="stroke-pageheader-1 stroke"></div>  
   <div class="stroke-pageheader-2 stroke"></div>  
 

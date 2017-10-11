@@ -11,7 +11,7 @@
   <div class="stroke-pageheader-1 stroke"></div>  
   <div class="stroke-pageheader-2 stroke"></div>  
   <div class="stroke-pageheader-3 stroke"></div>  
-  <div class="h-full layout v-center p3-lr p6-t-small">
+  <div class="h-large layout v-center p3-lr p6-t-small">
 			<div class="w-half-small">
         <h1 class="f-headline m3-b"><?php echo $title; ?></h1>
         <div class="m6-b"><?php echo $content; ?></div>

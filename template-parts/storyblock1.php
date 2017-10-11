@@ -10,8 +10,8 @@
     <h4 class="f2 m2-b"><?php echo $title; ?></h4>
       <div class="w-small">  
     <p class="m3-b"><?php echo $content; ?></p>
-    <a href="<?php echo $link; ?>" class="m6-b button button-secondary">View case study</a>
+    <a href="<?php echo $link; ?>" class="m6-b button button-secondary"><?php _e('View case study', '_pixformance'); ?></a>
     </div>
   </div>
-</div>
+</div> 
 <?php endif; ?>

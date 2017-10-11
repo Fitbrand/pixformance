@@ -1,7 +1,8 @@
- @import "./_fonts.css";
+
  @import "./_vars.css";
  @import "./_base.css";
  @import "./_helpers.css";
  @import "./_styles.css";
  @import "./_wp.css";
  @import "./_strokes.css";
+ @import "../node_modules/lity/dist/lity.css";

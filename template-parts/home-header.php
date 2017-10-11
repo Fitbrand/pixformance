@@ -1,4 +1,4 @@
-<?php if(get_field('video_header_homepage')) : ?>
+<?php if(get_field('page_header')) : ?>
 <?php $block = get_field('video_header_homepage'); ?>
 <?php
 $image = $block['image']; 

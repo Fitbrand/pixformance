@@ -31,6 +31,8 @@
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
     "copy-webpack-plugin": "^4.0.1",
+    "jssocials": "^1.5.0",
+    "lity": "^2.3.0",
     "postcss-size": "^2.0.0"
   }
 }

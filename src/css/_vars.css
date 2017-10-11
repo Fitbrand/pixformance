@@ -7,9 +7,9 @@
  * Fonts
  */
 
-  --font-family: 'Fakt Pro Bln', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto,
+  --font-family: 'Lato', sans-serif, -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto,
     noto, "segoe ui", arial, sans-serif;
-  --font-family-heading: 'Fakt Pro Bln', -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu,
+  --font-family-heading: 'Lato', sans-serif, -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu,
     roboto, noto, "segoe ui", arial, sans-serif;
   --font-family-serif: initial;
 
