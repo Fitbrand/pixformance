@@ -84,7 +84,6 @@ $(document).ready(function() {
   smoothScroll();
 
 
-
   $("#search-toggle").click(function() {
     $(".menu-search-wrapper").toggleClass("active");
   });

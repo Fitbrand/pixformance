@@ -690,6 +690,10 @@ sup {
   }
 }
 
+.h-medium {
+
+}
+
 .h-item-1 {
   height: 100vh;
   max-height: 400px;
@@ -713,8 +717,15 @@ sup {
      height: 80vh;
   max-height: 45rem;
   }
-  
-  
+}
+
+.h-medium {
+    height: 100vh;
+   max-height: 400px;
+  @media (--breakpoint-medium) {
+     height: 80vh;
+  max-height: 45rem;
+  }
 }
 
 .h-100 {

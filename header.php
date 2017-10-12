@@ -55,12 +55,14 @@
 				<span></span>
 			</div>
 			</button>
+			<div class="menu-container">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
+			</div>
 		</nav><!-- #site-navigation -->
 				<button id="search-toggle" class="menu-search naked">
 				<svg class="icon-search">

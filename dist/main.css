@@ -1102,6 +1102,10 @@ sup {
 
   }
 
+.h-medium {
+
+}
+
 .h-item-1 {
   height: 100vh;
   max-height: 400px
@@ -1129,13 +1133,24 @@ sup {
 .h-large {
     height: 100vh;
    max-height: 400px
-  
-  
 }
 
 @media (min-width: 59rem) {
 
   .h-large {
+    height: 80vh;
+    max-height: 45rem;
+  }
+  }
+
+.h-medium {
+    height: 100vh;
+   max-height: 400px
+}
+
+@media (min-width: 59rem) {
+
+  .h-medium {
     height: 80vh;
     max-height: 45rem;
   }
@@ -1627,13 +1642,13 @@ sup {
 
   .main-navigation {}
 
-  .main-navigation .menu-main-navigation-container {
+  .main-navigation .menu-container > div {
     display: none;
   }
 
   .main-navigation.toggled {}
 
-  .main-navigation.toggled .menu-main-navigation-container {
+  .main-navigation.toggled .menu-container > div {
     display: block;
   }
 
@@ -1646,8 +1661,6 @@ sup {
     padding: 2rem 1rem 1rem;
     box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
     transition: margin 0.7s ease-in-out;
-    height: calc(100vh - 39px);
-    overflow-y: scroll;
   }
 
   .main-navigation li {
@@ -1793,12 +1806,12 @@ sup {
   }
   }
 
-.footer-menu-block > div {
+.menu-footer-menu-container {
 }
 
 @media (min-width: 59rem) {
 
-  .footer-menu-block > div {
+  .menu-footer-menu-container {
     display: flex;
     justify-content: flex-end;
   }
@@ -1823,26 +1836,26 @@ sup {
   }
   }
 
-.menu-social-container, .footer-menu-block {
+.menu-social-container, .footer-menu-block > div {
 }
 
-.menu-social-container ul, .footer-menu-block ul {
+.menu-social-container ul, .footer-menu-block > div ul {
   list-style: none;
   border-left: 1px solid #000;
   padding: 0 0 0 1rem;
   margin-top: 0;
 }
 
-.menu-social-container li, .footer-menu-block li {
+.menu-social-container li, .footer-menu-block > div li {
   margin-bottom: 5px;
 }
 
-.menu-social-container a, .footer-menu-block a {
+.menu-social-container a, .footer-menu-block > div a {
   text-decoration: none;
   position: relative;
 }
 
-.menu-social-container a:after, .footer-menu-block a:after {
+.menu-social-container a:after, .footer-menu-block > div a:after {
   position: relative;
   font-family: 'Zapf Dingbats';
   content: '\27F6';
