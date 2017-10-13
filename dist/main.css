@@ -414,6 +414,16 @@ input:not([type="radio"]):not([type="checkbox"]) {
   }
   }
 
+.text-left {
+}
+
+@media(min-width: 59rem) {
+
+  .text-left {
+    text-align: left;
+  }
+  }
+
 sup {
   font-size: 0.6em;
 }
@@ -1038,6 +1048,18 @@ sup {
  * Widths
  */
 
+.w-header-small {
+  max-width: 42rem;
+}
+
+.w-header-medium {
+  max-width: 56rem;
+}
+
+.w-header-large {
+  max-width: 68rem;
+}
+
 .w-small {
   max-width: 300px;
 }
@@ -1187,6 +1209,14 @@ sup {
 .center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
 }
 
 .push-right {

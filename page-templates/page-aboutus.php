@@ -11,6 +11,8 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'template-parts/page-header' ); ?>
+<?php if(get_field('about_header')) : ?>
 <div class="wrapper bg-yellow-light ">
 <a href="#main" class="header-read-more ttu no-underline"><?php esc_html_e( 'More', '_pixformance' ); ?></a>
 	<div class="stroke stroke-pageheader-3 "></div>  
@@ -21,6 +23,7 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
+<?php endif; ?>
 <div id="main">
 	<?php get_template_part( 'template-parts/content-block-general' ); ?>
 	<?php get_template_part( 'template-parts/about-valerie' ); ?>
