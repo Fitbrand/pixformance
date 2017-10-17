@@ -39,23 +39,22 @@ get_header(); ?>
 									<strong><?php esc_html_e( 'Share on', '_pixformance' ); ?></strong>
 									<div class="blog-links" id="share">
 									<!-- Facebook -->
-										<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
-												Facebook
+										<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" class="no-underline">
+												Facebook <span class="arrow-right">&nbsp;</a>
 										</a>
 										<!-- Twitter -->
-										<a href="https://twitter.com/share?url=<?php the_permalink(); ?>&amp;text=Pixformance&amp;hashtags=pixformance" target="_blank">
-											Twitter
+										<a href="https://twitter.com/share?url=<?php the_permalink(); ?>&amp;text=Pixformance&amp;hashtags=pixformance" target="_blank" class="no-underline">
+											Twitter <span class="arrow-right">&nbsp;</a>
 										</a>
 										<!-- LinkedIn -->
-										<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>" target="_blank">
-												Linkedin
+										<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>" target="_blank" class="no-underline">
+												Linkedin <span class="arrow-right">&nbsp;</a>
 										</a>
 									</div>
 								</div>
 								<p><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="button"><?php esc_html_e( 'Contact us', '_pixformance' ); ?></a></p>
 							</div>
 						</div>
-			
 				<div>
 				<?php 
 					$images = get_field('gallery');

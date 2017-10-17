@@ -66,6 +66,11 @@
 
 </body>
 </html>
+
+<?php
+	global $sitepress;
+	$current_language = $sitepress->get_current_language();
+	if ($current_language == 'nl') : ?>
 <div class="pix">
 <script type="text/javascript">
 	/* <![CDATA[ */
@@ -82,3 +87,4 @@
 		</div>
 	</noscript>
 </div>
+<?php endif; ?>

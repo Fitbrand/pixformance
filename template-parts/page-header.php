@@ -12,6 +12,7 @@
   $stroke = $header['stroke_preset'];
   $overlay = $header['overlay'];
 ?>
+<?php if($title) : ?>
 <div class="wrapper filled " style="background-image: url('<?php echo wp_get_attachment_image_src( $image, $size )[0] ?>')">
 <?php if ($overlay) : ?><div class="overlay-gray"><?php endif; ?>
   <?php if($stroke === 'preset1') : ?>
@@ -34,5 +35,5 @@
 
   <?php if ($overlay) : ?></div><?php endif; ?>
 </div>
-  
+<?php endif; ?>
 <?php endif; ?>
