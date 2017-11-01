@@ -51,7 +51,10 @@
 			} else {
 					$style = '';    
 			}
-	?>                                        
+	?>
+
+  <?php if(!is_page(1283)) : ?>                                        
     
 	<a class="contact-cta white no-underline hover-effect <?php echo $style; ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><?php esc_html_e( 'Contact us', '_pixformance' ); ?> <span class="arrow-right"></span></span></a>
+    <?php endif; ?>
 <?php endif; ?>

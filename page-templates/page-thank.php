@@ -18,7 +18,7 @@ get_header(); ?>
       $image = $image[0];
     ?>
     
-  <div class="wrapper h-item-2 filled" style="background-image: url(<?php echo $image; ?>)">
+  <div class="wrapper h-large filled" style="background-image: url(<?php echo $image; ?>)">
     <div class="layout">
       &nbsp;
     </div>
@@ -26,7 +26,7 @@ get_header(); ?>
 
 <?php endif; ?>
 
-<div class="wrapper p9-t ">
+<div class="wrapper p3-t ">
 <div class="layout p3-lr">
   <div class="w-half">
     <div class="m6-b">

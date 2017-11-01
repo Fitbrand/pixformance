@@ -139,6 +139,10 @@ sup {
   color: var(--blue);
 }
 
+.blue-dark {
+  color: var(--blue-dark)
+}
+
 /* background colors */
 
 .bg-white {
@@ -373,6 +377,12 @@ sup {
   }
 }
 
+.m9-b-small {
+  @media (--breakpoint-mobile-only) {
+   margin-bottom: 1rem !important;
+  }
+}
+
 /*
  * Lists
  */
@@ -414,6 +424,12 @@ sup {
 .grid-gap-medium {
   @media (--breakpoint-small) {
     grid-column-gap: 3rem;
+  }
+}
+
+.grid-gap-small {
+  @media (--breakpoint-small) {
+    grid-column-gap: 1rem;
   }
 }
 
