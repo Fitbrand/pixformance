@@ -8,8 +8,8 @@ $content = $block['content'];
 $size = 'header';
 ?>
 <div class="wrapper filled "  style="background-image: url(<?php echo wp_get_attachment_image_src( $image, 'full' )[0] ?>)">
+  <a href="#main" class="header-read-more ttu no-underline"><?php esc_html_e( 'More', '_pixformance' ); ?></a>
   <div class="overlay-gray">
-    <a href="#main" class="header-read-more ttu no-underline"><?php esc_html_e( 'More', '_pixformance' ); ?></a>
     <div class="stroke-pageheader-1 stroke"></div>  
     <div class="stroke-pageheader-2 stroke"></div>  
     <div class="stroke-pageheader-3 stroke"></div>  

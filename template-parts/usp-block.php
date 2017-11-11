@@ -7,10 +7,11 @@
   $size = 'full';
   ?>
 
-<div class="wrapper bg-gray-light clearfix">
+<div class="wrapper p9-t bg-gray-light clearfix">
 <div class="stroke-usp-1 stroke stroke-scroll" id="usp-stroke-1"></div>
 <div class="stroke-usp-2 stroke stroke-scroll" id="usp-stroke-2"></div>
   <div class="layout p3-lr">
+    <h2 class="f2  ttu text-center m1-b"><?php esc_html_e( 'The Pixformance Station', '_pixformance' ); ?></h2>
     <div class="usps m6-b p3-t">
       <div class="v-center-spaced">
       <?php foreach($row1 as $item):  ?>

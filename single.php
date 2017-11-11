@@ -22,7 +22,7 @@ get_header(); ?>
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 					$image = $image[0];
 				?>
-				<header class="p9-t m6-b">
+				<header class="p9-t m6-b p3-lr">
 					<img src="<?php echo $image; ?>" alt="">
 				</header><!-- .entry-header -->
 				<?php endif; ?>

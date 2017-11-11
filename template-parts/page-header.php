@@ -14,6 +14,7 @@
 ?>
 <?php if($title) : ?>
 <div class="wrapper filled " style="background-image: url('<?php echo wp_get_attachment_image_src( $image, $size )[0] ?>')">
+<a href="#main" class="header-read-more ttu no-underline"><?php esc_html_e( 'More', '_pixformance' ); ?></a>
 <?php if ($overlay) : ?><div class="overlay-gray"><?php endif; ?>
   <?php if($stroke === 'preset1') : ?>
     <div class="stroke-pageheader-1 stroke"></div>  

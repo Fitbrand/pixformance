@@ -164,6 +164,12 @@ sup {
   background-color: var(--yellow);
 }
 
+.bg-yellow-gradient {
+  @media (--breakpoint-medium) {
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 20%,rgba(253,254,236,1) 20%,rgba(253,254,236,1) 56%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 100%); 
+  }
+}
+
 .bg-yellow-light {
   background-color: var(--yellow-light);
 }
@@ -754,6 +760,14 @@ sup {
   }
 }
 
+.h-item-3 {
+  height: 100vh;
+   max-height: 400px;
+  @media (--breakpoint-medium) {
+  max-height: 800px;
+  }
+}
+
 .h-large {
     height: 100vh;
    max-height: 400px;
@@ -965,3 +979,18 @@ sup {
    box-shadow: none;
    outline: 0;
  }
+
+ .video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-wrapper object,
+.video-wrapper embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

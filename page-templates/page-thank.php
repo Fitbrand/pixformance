@@ -19,6 +19,7 @@ get_header(); ?>
     ?>
     
   <div class="wrapper h-large filled" style="background-image: url(<?php echo $image; ?>)">
+  <a href="#main" class="header-read-more ttu no-underline"><?php esc_html_e( 'More', '_pixformance' ); ?></a>
     <div class="layout">
       &nbsp;
     </div>
@@ -26,7 +27,7 @@ get_header(); ?>
 
 <?php endif; ?>
 
-<div class="wrapper p3-t ">
+<div class="wrapper p3-t" id="main">
 <div class="layout p3-lr">
   <div class="w-half">
     <div class="m6-b">

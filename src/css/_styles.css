@@ -288,9 +288,10 @@
 .contact-cta {
   display: none;
   @media (--breakpoint-medium) {
-  background-color: #f4d2d4;
+  background-color: #F4D2D4;
   height: 100px;
   width: 100px;
+  color: black;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
@@ -726,9 +727,22 @@ input[type="submit"] {
   }
 }
 
+.cover-xlarge {
+  object-fit: cover;
+  height: 290px;
+  @media (--breakpoint-small) {
+    height: 340px;
+  }
+  @media (--breakpoint-medium) {
+    height: 860px;
+  }
+}
+
 .label-on-top {
+    @media (--breakpoint-medium) {
   position: absolute;
   top: 45%;
+    }
 }
 
 
@@ -781,7 +795,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   display: none;
   @media (--breakpoint-small) {
   position: absolute;
-  top: 85vh;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -797,7 +810,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   }
 
   @media (--breakpoint-medium) {
-      top: 92vh;
+      bottom: 50px;
   }
 }
 
